@@ -1,525 +1,598 @@
-<!DOCTYPE html>
-<html lang="es" class="dark">
+YPE html>
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FacturaNex | Facturación Electrónica sin fricción</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacturaNex | Facturación Electrónica sin fricción</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FacturaNex SAS es la plataforma todo en uno para facturación electrónica, POS, nómina e integración DIAN en Colombia.">
+    <meta name="keywords" content="Facturacion electronica, DIAN, POS, Nómina electrónica, SaaS, Colombia, FacturaNex, API DIAN">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#E91E63",
-            primaryHover: "#D81B60",
-            primarySoft: "#E91E6320",
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-            bgDark: "#0B0C10",
-            bgSurface: "#16171D",
-            bgSoft: "#1C1E26",
-
-            textMain: "#FFFFFF",
-            textSoft: "#A1A1AA",
-            textMuted: "#71717A",
-            borderSoft: "#27272A",
-          },
-          fontFamily: {
-            display: ["Spline Sans", "sans-serif"],
-          },
-          boxShadow: {
-            neon: "0 0 30px rgba(233,30,99,.45)",
-            neonSoft: "0 0 20px rgba(233,30,99,.25)",
-          }
+    <!-- Tailwind Config for Branding -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D81B60",
+                        primaryHover: "#E91E63",
+                        primaryGlow: "rgba(216, 27, 96, 0.5)",
+                        secondary: "#000B18",
+                        surface: "#0A1128",
+                        surfaceLight: "rgba(255, 255, 255, 0.03)",
+                        textMain: "#F8FAFC",
+                        textMuted: "#94A3B8"
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 15px rgba(216, 27, 96, 0.2)' },
+                            '100%': { boxShadow: '0 0 30px rgba(216, 27, 96, 0.6)' },
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <style>
-    /* borde animado tipo "video cards" */
-    .glow-border {
-      position: relative;
-      overflow: hidden;
-    }
-    .glow-border::before {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      background: radial-gradient(circle at 20% 20%, rgba(233,30,99,.55), transparent 45%),
-                  radial-gradient(circle at 80% 80%, rgba(233,30,99,.45), transparent 50%);
-      opacity: .0;
-      transition: opacity .35s ease;
-      pointer-events: none;
-    }
-    .glow-border:hover::before {
-      opacity: 1;
-    }
-    .glow-border::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      border:1px solid rgba(233,30,99,.35);
-      border-radius: 1.5rem;
-      opacity:0;
-      transition: opacity .35s ease;
-      pointer-events:none;
-    }
-    .glow-border:hover::after{ opacity:1; }
-  </style>
+    <style>
+        body {
+            background-color: #030712;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Classes */
+        .glass {
+            background: rgba(10, 17, 40, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(216, 27, 96, 0.4);
+            box-shadow: 0 10px 40px rgba(216, 27, 96, 0.15);
+        }
+
+        /* Custom Gradients Text */
+        .text-gradient {
+            background: linear-gradient(to right, #E91E63, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Neon Border Button */
+        .btn-neon {
+            position: relative;
+            background: transparent;
+            border: 2px solid #D81B60;
+            color: white;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-neon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #D81B60, #E91E63);
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        .btn-neon:hover::before {
+            width: 100%;
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 20px rgba(216, 27, 96, 0.5);
+            border-color: transparent;
+        }
+    </style>
 </head>
+<body class="antialiased selection:bg-primary selection:text-white relative">
 
-<body class="bg-bgDark text-textMain font-display antialiased">
+    <!-- Animated Background Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob"></div>
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-[500px] h-[500px] bg-blue-600/10 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob animation-delay-4000"></div>
+    </div>
 
-<!-- NAV -->
-<header class="fixed top-0 w-full z-50 bg-bgDark/80 backdrop-blur border-b border-borderSoft">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <h1 class="text-xl font-extrabold">Factura<span class="text-primary">Nex</span></h1>
-
-    <nav class="hidden md:flex gap-8 text-sm text-textSoft">
-      <a href="#soluciones" class="hover:text-primary">Soluciones</a>
-      <a href="#videos" class="hover:text-primary">Videos</a>
-      <a href="#modulos" class="hover:text-primary">Módulos</a>
-      <a href="#precios" class="hover:text-primary">Precios</a>
-      <a href="#demo" class="hover:text-primary">Demo</a>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <img src="img/logo_facturanex_v2.jpg" alt="FacturaNex Logo" class="h-10 w-auto object-contain rounded-lg">
+                <span class="text-2xl font-bold tracking-tight sr-only">FacturaNex</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#beneficios" class="text-textMuted hover:text-white transition-colors">Beneficios</a>
+                <a href="#modulos" class="text-textMuted hover:text-white transition-colors">Funcionalidades</a>
+                <a href="#planes" class="text-textMuted hover:text-white transition-colors">Modelos de Pago</a>
+                <a href="#testimonios" class="text-textMuted hover:text-white transition-colors">Clientes</a>
+                <a href="https://wa.me/573155155512" target="_blank" class="text-primary hover:text-white transition-colors font-bold">📲 315 515 55 12</a>
+                <a href="#planes" class="btn-neon px-6 py-2.5 rounded-full font-semibold !text-white flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                    Empezar Ahora
+                </a>
+            </div>
+        </div>
     </nav>
-     <button
-         onclick="sendWA('Hola, estoy interesado en FacturaNex')"
-         class="bg-primary hover:bg-primaryHover px-5 py-2 rounded-full font-bold text-sm text-white shadow-neon transition">
-         Adquirir por WhatsApp
-       </button>
+
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-3 px-1 py-1 pr-4 rounded-full glass border-primary/30 text-primary mb-6 animate-glow">
+                        <img src="img/dian_icon.png" alt="DIAN Icon" class="h-8 w-auto rounded-full bg-white/10">
+                        <span class="text-xs font-bold tracking-wide uppercase">Conexión Directa con la DIAN</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
+                        Facturación Electrónica <br>
+                        <span class="text-gradient">sin fricción.</span>
+                    </h1>
+                    
+                    <p class="text-lg text-textMuted mb-10 max-w-xl leading-relaxed">
+                        Plataforma <strong class="text-white">todo-en-uno</strong> diseñada para administrar tu negocio, agilizar tus ventas y cumplir con todas las normativas de la DIAN en tiempo récord. No más procesos complejos.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#planes" class="bg-primary hover:bg-primaryHover text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(216,27,96,0.4)] hover:shadow-[0_0_30px_rgba(216,27,96,0.6)] hover:-translate-y-1">
+                            Ver Módulos
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a href="https://wa.me/573155155512?text=Hola,%20te%20ayudo%20con%20tu%20facturación%20electrónica.%20¿Ya%20tienes%20algún%20sistema%20o%20software%20actualmente?" target="_blank" class="glass hover:bg-white/5 border border-white/10 text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
+                            <span class="material-symbols-outlined">support_agent</span>
+                            Contactar Asesor
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-6 text-sm text-textMuted border-t border-white/10 pt-6 max-w-lg">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            Activo en máx. 24h
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-green-400">check_circle</span>
+                            Soporte Humano Incluido
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative lg:ml-10" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-600/20 rounded-[2rem] filter blur-2xl transform rotate-3"></div>
+                    <img src="img/hero_mockup.png" alt="Dashboard FacturaNex en Laptop" class="relative z-10 w-full rounded-[2rem] shadow-2xl border border-white/10 animate-float object-cover aspect-video">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 z-20 glass-card p-4 rounded-2xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <img src="img/dian_icon.png" alt="DIAN" class="h-12 w-auto object-contain">
+                        <div>
+                            <p class="text-xs text-textMuted">Estado DIAN</p>
+                            <p class="font-bold text-white">100% Aprobado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios (Marquee / Stats) -->
+    <section id="beneficios" class="py-10 border-y border-white/5 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 lg:gap-24 opacity-70">
+            <div class="flex items-center gap-3 font-semibold" data-aos="fade-up" data-aos-delay="100">
+                <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+                Habilitación Express
+            </div>
+            <div class="flex items-center gap-3 font-semibold" data-aos="fade-up" data-aos-delay="200">
+                <span class="material-symbols-outlined text-primary text-3xl">security</span>
+                Certificado Incluido
+            </div>
+            <div class="flex items-center gap-3 font-semibold" data-aos="fade-up" data-aos-delay="300">
+                <span class="material-symbols-outlined text-primary text-3xl">api</span>
+                Gestión de Resolución
+            </div>
+            <div class="flex items-center gap-3 font-semibold" data-aos="fade-up" data-aos-delay="400">
+                <span class="material-symbols-outlined text-primary text-3xl">storefront</span>
+                Documentos Ilimitados
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Módulos -->
+    <section id="modulos" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-2">Todo lo que necesitas</h2>
+                <h3 class="text-4xl md:text-5xl font-bold">Módulos que <span class="text-gradient">potencian</span> tu negocio</h3>
+                <p class="text-textMuted mt-4 max-w-2xl mx-auto">Adquiere solo los módulos que requieras. Facturación transparente y sin costos sorpresa por número de documentos generados.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-primary/20 flex items-center justify-center border border-primary/30 mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl">receipt_long</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Facturación Electrónica</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Emisión de facturas rápida, ilimitada y sin cuotas ocultas por volumen de transacciones.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center border border-blue-500/30 mb-6 text-blue-400">
+                        <span class="material-symbols-outlined text-3xl">point_of_sale</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Módulo POS</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Generación de tirillas térmicas, facturación en mostrador, códigos QR y total soporte DIAN.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center border border-green-500/30 mb-6 text-green-400">
+                        <span class="material-symbols-outlined text-3xl">payments</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Nómina Electrónica</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Emite la nómina de tus empleados y transfiérela a la DIAN con unos pocos clics.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center border border-orange-500/30 mb-6 text-orange-400">
+                        <span class="material-symbols-outlined text-3xl">description</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Documento Soporte</h4>
+                    <p class="text-textMuted text-sm leading-relaxed">Formaliza transacciones con sujetos no obligados a facturar sin complicaciones legales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y Precios -->
+    <section id="planes" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A1128]/50 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl md:text-5xl font-bold">Un Modelo Simple y <span class="text-primary">Económico</span></h3>
+                <p class="text-textMuted mt-4 text-lg">Iniciamos la base con <strong class="text-white">solo $150.000</strong>. Luego, adaptamos el sistema a tu medida.</p>
+            </div>
+
+            <!-- Implementación Base Banner -->
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 mb-12 shadow-[0_0_30px_rgba(216,27,96,0.1)]" data-aos="zoom-in">
+                <div>
+                    <span class="inline-flex items-center gap-1 bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+                        Paso 1 (Obligatorio)
+                    </span>
+                    <h4 class="text-2xl font-bold text-white mb-2">Implementación Base</h4>
+                    <p class="text-textMuted text-sm">Todo lo indispensable para conectar tu empresa con la DIAN.</p>
+                    <ul class="mt-4 flex flex-wrap gap-4 text-sm font-medium">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Certificado Digital Integrado</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Habilitación DIAN</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Gestión de Resolución</li>
+                    </ul>
+                </div>
+                <div class="text-center shrink-0">
+                    <span class="text-4xl font-black block">$150.000 <span class="text-sm font-normal text-textMuted">COP</span></span>
+                    <p class="text-xs text-textMuted mt-1 mb-3">Pago Inicial Requerido</p>
+                </div>
+            </div>
+
+            <div class="text-center mb-10"><h3 class="text-2xl font-bold text-white">¿Cómo deseas operar tu facturación?</h3></div>
+
+            <div class="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                
+                <!-- Opcion 1: Cloud -->
+                <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden" data-aos="flip-left">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
+                    <h4 class="text-2xl font-bold text-white mb-2">☁️ Uso FacturaNex Cloud</h4>
+                    <p class="text-textMuted text-sm h-10">Ideado para empresas que <strong>no tienen un software</strong> o sistema de ventas actual.</p>
+                    
+                    <div class="my-6">
+                        <p class="text-sm text-textMuted mb-2">Elige los módulos que operarán en tu Cloud:</p>
+                        <div class="grid grid-cols-2 gap-3 mb-6 font-bold">
+                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Facturación</span></div>
+                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">POS Electrónico</span></div>
+                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Nómina DIAN</span></div>
+                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Doc. Soporte</span></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 space-y-3 mb-10 text-sm">
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Sistema web propio totalmente amigable</div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Documentos operativos <strong>Ilimitados</strong></div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Pago de saldos disponible a 15 días</div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Incluye RADIAN y E-commerce Básico</div>
+                    </div>
+
+                    <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20iniciar%20con%20FacturaNex%20Cloud.%20Actualmente%20NO%20tengo%20software')" class="w-full py-4 text-center bg-primary hover:bg-primaryHover rounded-2xl font-bold transition-all text-white shadow-[0_0_20px_rgba(216,27,96,0.4)] relative z-10 hover:-translate-y-1">
+                        Elegir Solución Cloud
+                    </button>
+
+                    <!-- Mini visual placeholder abstract para cloud -->
+                    <div class="absolute bottom-0 right-0 w-full h-40 opacity-30 pointer-events-none bg-center bg-cover mix-blend-screen" style="background-image: url('img/cloud_infrastructure_facturanex_1776037739185.png'); mask-image: linear-gradient(to top, black, transparent);"></div>
+                </div>
+
+                <!-- Opcion 2: Integracion (Destacado) -->
+                <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] transform lg:-translate-y-4" data-aos="flip-right" data-aos-delay="200">
+                    <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+                    <div class="absolute -top-10 -right-10">
+                        <span class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider transform rotate-12 inline-block shadow-lg">El Ecosistema Total</span>
+                    </div>
+                    
+                    <h4 class="text-2xl font-bold text-white mb-2 relative z-10">Integración API Avanzada (Ejecutable)</h4>
+                    <p class="text-textMuted text-sm h-10 relative z-10">Ideado para empresas que <strong>ya tienen un software/ERP</strong> y quieren acoplarnos la facturación.</p>
+                    
+                    <div class="my-6 relative z-10">
+                        <p class="text-sm text-textMuted mb-2">Conecta a la perfección estos módulos:</p>
+                        <div class="grid grid-cols-2 gap-3 mb-6 font-bold z-10 relative">
+                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Facturación</span></div>
+                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">POS Electrónico</span></div>
+                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Doc. Soporte</span></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 space-y-3 mb-10 relative z-10 text-sm">
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Aplicación local en Python paralela</div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Flujo ágil: Lee XML → Firma → Envía a DIAN</div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Documentos de transacción <strong>Ilimitados</strong></div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Respuestas DIAN instantáneas por API</div>
+                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Soporte humano y técnico especializado</div>
+                    </div>
+
+                    <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20iniciar%20con%20FacturaNex%20Integración%20(API).%20SÍ%20tengo%20software%20actualmente')" class="w-full py-4 text-center bg-primary hover:bg-primaryHover rounded-2xl font-bold transition-all text-white shadow-[0_0_20px_rgba(216,27,96,0.4)] relative z-10 hover:-translate-y-1">
+                        Elegir Integración XML
+                    </button>
+                    <!-- Mini visual placeholder abstract para integracion -->
+                    <div class="absolute bottom-0 right-0 w-full h-40 opacity-30 pointer-events-none bg-center bg-cover mix-blend-screen" style="background-image: url('img/xml_integration_api_1776036953581.png'); mask-image: linear-gradient(to top, black, transparent);"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios / Clientes Section -->
+    <section id="testimonios" class="py-24 relative overflow-hidden bg-surface">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h3 class="text-4xl md:text-5xl font-bold">Lo que dicen <span class="text-primary">nuestros clientes</span></h3>
+                <p class="text-textMuted mt-4 text-lg">Puntuación de 5 estrellas por cientos de empresas colombianas que ya simplificaron su facturación.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                    </div>
+                    <p class="text-sm text-white leading-relaxed mb-6">"Estábamos llenos de multas y retrasos con nuestro sistema anterior. Al integrarnos con FacturaNex, la velocidad de respuesta de la DIAN fue inmediata y nunca más tuvimos una caída del sistema. Totalmente recomendado."</p>
+                    <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">L</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Luis Alberto R.</h5>
+                            <p class="text-textMuted text-xs">Administrador de Ferretería</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="glass-card p-8 rounded-3xl relative border-primary/30" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                    </div>
+                    <p class="text-sm text-white leading-relaxed mb-6">"El soporte en WhatsApp ha sido increíble. Contraté la solución Cloud porque no tenía software y fue llave en mano. En un día ya estaba entregando tirillas POS y Facturas electrónicas sin límites ni dolores de cabeza."</p>
+                    <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="h-10 w-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold">C</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Carolina M.</h5>
+                            <p class="text-textMuted text-xs">Restaurante & Café</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="glass-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                        <span class="material-symbols-outlined text-xl">star</span>
+                    </div>
+                    <p class="text-sm text-white leading-relaxed mb-6">"Nuestra empresa de software conectó FacturaNex mediante API en menos de 48 horas. La estabilidad técnica y el hecho de que el certificado digital estuviera incluido dentro del precio base de integración fue excelente."</p>
+                    <div class="flex items-center gap-4 border-t border-white/5 pt-4">
+                        <div class="h-10 w-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold">I</div>
+                        <div>
+                            <h5 class="text-white font-bold text-sm">Ing. David G.</h5>
+                            <p class="text-textMuted text-xs">Agencia de Desarrollo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integración Visual Section -->
+    <section class="py-20 border-y border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('img/xml_integration_api_1776036953581.png')] bg-cover bg-center opacity-10 blur-sm mix-blend-screen"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">Respaldados por <span class="text-primary">FacturaNex SAS</span></h3>
+                <p class="text-textMuted text-lg mb-6 leading-relaxed">
+                    Somos tu aliado directo. FacturaNex SAS tiene conexión directa con la DIAN y garantizamos un proceso sin tropiezos. Iniciamos con $150.000 y <strong>en menos de 24 horas estás facturando</strong>.
+                </p>
+                <ul class="space-y-4 text-sm text-white font-medium">
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Ubicados estratégicamente en Bogotá y conectados con todo el país.</li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Firma digital segura y en regla garantizada.</li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Equipo real dispuesto a apoyarte. No eres un número más.</li>
+                </ul>
+            </div>
+            <div class="relative rounded-3xl overflow-hidden glass border-white/10 p-4 shadow-2xl flex items-center justify-center" data-aos="zoom-in-left">
+                <img src="img/dian_icon.png" alt="Conexión DIAN" class="w-2/3 max-w-sm object-contain animate-float drop-shadow-[0_0_40px_rgba(255,215,0,0.4)]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section Forma -->
+    <section id="demo" class="py-24 relative z-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass-card rounded-[2.5rem] p-10 md:p-14 border border-primary/20 shadow-[0_0_50px_rgba(216,27,96,0.1)] text-center relative overflow-hidden" data-aos="fade-up">
+                
+                <h3 class="text-4xl font-bold mb-4">Pruébalo tú mismo. <span class="text-gradient">En vivo.</span></h3>
+                <p class="text-textMuted text-lg mb-10 max-w-2xl mx-auto">Experimenta el poder de FacturaNex antes de tomar tu decisión. Accede a nuestro entorno simulado y convéncete.</p>
+
+                <div class="grid md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-10">
+                    <div class="bg-surface border border-white/10 rounded-2xl p-5 break-all">
+                        <span class="text-xs text-textMuted font-bold uppercase tracking-wider mb-2 block">URL de Ingreso</span>
+                        <p class="text-white font-mono text-lg font-bold select-all tracking-widest">[ _________________ ]</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-surface border border-white/10 rounded-2xl p-5 break-all">
+                            <span class="text-xs text-textMuted font-bold uppercase tracking-wider mb-2 block">Correo de Acceso</span>
+                            <p class="text-white font-mono text-lg font-bold select-all tracking-widest">[ _________________ ]</p>
+                        </div>
+                        <div class="bg-surface border border-white/10 rounded-2xl p-5 break-all">
+                            <span class="text-xs text-textMuted font-bold uppercase tracking-wider mb-2 block">Contraseña</span>
+                            <p class="text-white font-mono text-lg font-bold select-all tracking-widest">[ _________________ ]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/573155155512?text=Hola,%20deseo%20acceder%20al%20Demo%20en%20Vivo%20de%20la%20plataforma" target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primaryHover text-white text-lg font-bold py-5 px-12 rounded-full shadow-[0_0_30px_rgba(216,27,96,0.5)] transition-all hover:-translate-y-1 hover:scale-105 active:scale-95 group">
+                    <span class="material-symbols-outlined group-hover:animate-bounce">play_circle</span>
+                    Solicitar Demo Personalizada
+                </a>
+                
+                <div class="mt-12 pt-8 border-t border-white/10 text-left">
+                    <h4 class="text-white font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">smart_display</span> Videos y Tutoriales</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+                            <div class="bg-primary/20 text-primary p-2 rounded-lg"><span class="material-symbols-outlined text-sm">play_arrow</span></div>
+                            <span class="text-sm text-textMuted hover:text-white transition-colors">Demo Completo Cloud</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10">
+                            <div class="bg-primary/20 text-primary p-2 rounded-lg"><span class="material-symbols-outlined text-sm">terminal</span></div>
+                            <span class="text-sm text-textMuted hover:text-white transition-colors">¿Cómo funciona la Integración?</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 pt-12 pb-8 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <img src="img/logo_facturanex_v2.jpg" alt="FacturaNex Logo" class="h-12 w-auto object-contain rounded hover:scale-105 transition duration-500">
+                <div class="text-left">
+                    <p class="text-white font-bold tracking-widest text-sm">FacturaNex SAS</p>
+                    <p class="text-textMuted text-xs mt-1">Conexión Directa con la DIAN.</p>
+                </div>
+            </div>
+            
+            <div class="text-center md:text-right">
+                <p class="text-textMuted text-sm font-semibold flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary text-sm">call</span> 
+                    Línea: <a href="https://wa.me/573155155512" class="text-white hover:text-primary transition">315 515 55 12</a>
+                </p>
+                <p class="text-textMuted text-sm font-semibold flex items-center justify-center md:justify-end gap-2 mb-2">
+                    <span class="material-symbols-outlined text-primary text-sm">mail</span> 
+                    <a href="mailto:contacto@facturanex.com" class="text-white hover:text-primary transition">contacto@facturanex.com</a>
+                </p>
+                <p class="text-textMuted text-sm">
+                    <a href="https://facturanex.com/" class="hover:text-primary hover:underline transition">facturanex.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-white/5 text-center text-xs text-textMuted opacity-60">
+            © 2025 FacturaNex SAS. Impulsando y digitalizando el crecimiento de las empresas en Colombia.
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/573155155512?text=Hola,%20te%20escribo%20desde%20la%20página.%20Me%20interesa%20el%20servicio%20de%20facturación." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all hover:-translate-y-2 hover:scale-110">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.101.824z"/></svg>
     </a>
-  </div>
-</header>
 
-<!-- HERO -->
-<section class="pt-32 pb-20">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
-    <div>
-      <span class="inline-flex items-center gap-2 mb-4 px-4 py-1 rounded-full bg-primarySoft text-primary text-xs font-bold">
-        <span class="material-symbols-outlined text-base">verified</span>
-        Conexión Directa con la DIAN
-      </span>
-
-      <h2 class="text-5xl lg:text-6xl font-black leading-tight">
-        Facturación Electrónica <br>
-        <span class="text-primary">sin fricción</span>
-      </h2>
-
-      <p class="mt-6 text-textSoft max-w-xl text-lg">
-        Plataforma todo-en-uno para administrar tu empresa, negocio y puntos de venta:
-        facturación electrónica, POS, nómina, recepción DIAN y e-commerce básico.
-      </p>
-
-      <div class="mt-8 flex flex-col sm:flex-row gap-4">
-        <a href="https://wa.me/573134276414" target="_blank" class="bg-primary hover:bg-primaryHover px-8 h-14 inline-flex items-center justify-center rounded-full font-bold shadow-neon transition hover:-translate-y-0.5">
-          Adquirir por WhatsApp
-        </a>
-        <a href="https://wa.me/573134276414" target="_blank"
-           class="border border-primary text-primary hover:bg-primarySoft px-8 h-14 inline-flex items-center justify-center rounded-full font-bold transition">
-          Soporte
-        </a>
-      </div>
-
-      <div class="mt-8 grid grid-cols-2 gap-4 max-w-md text-sm text-textSoft">
-        <div class="bg-bgSurface border border-borderSoft rounded-xl p-4">
-          <p class="text-textMuted">Implementación</p>
-          <p class="font-bold text-textMain">Rápida y guiada</p>
-        </div>
-        <div class="bg-bgSurface border border-borderSoft rounded-xl p-4">
-          <p class="text-textMuted">Soporte</p>
-          <p class="font-bold text-textMain">Humano 12/7</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative rounded-3xl overflow-hidden min-h-[420px] p-12">
-
-  <!-- FONDO GRADIENTE SUAVE -->
-  <div class="absolute inset-0 bg-gradient-to-br from-[#1f2933] via-[#0b0c10] to-[#2a0e23]"></div>
-
-  <!-- IMAGEN PANEL -->
-  <img
-    src="img/imagen_factura.jpg"
-    alt="Panel FacturaNex"
-    class="absolute right-12 top-12 w-[520px] rounded-2xl shadow-2xl opacity-95"
-  >
-
-  <!-- TARJETA FLOTANTE -->
-  <div
-    class="group absolute bottom-12 right-16 bg-bgSurface/95 backdrop-blur-md
-           border border-borderSoft rounded-2xl p-6 shadow-xl
-           transition-all duration-300 hover:border-primary hover:shadow-neon">
-
-    <p class="text-sm text-textSoft mb-2">
-      Validación DIAN exitosa
-    </p>
-
-    <p class="text-3xl font-black">
-      $145.200.000 COP
-    </p>
-
-    <div class="mt-4 flex items-center justify-between text-sm text-textSoft">
-      <span class="inline-flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-green-500"></span>
-        Aprobada
-      </span>
-
-      <span class="px-3 py-1 rounded-full bg-primarySoft text-primary font-bold text-xs">
-        +12.5% crecimiento
-      </span>
-    </div>
-
-  </div>
-
-</div>
-
-
-  </div>
-</section>
-
-<!-- SOLUCIONES -->
-<section id="soluciones" class="py-20 bg-bgSoft">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-black text-center mb-12">
-      Dos soluciones, <span class="text-primary">una sola visión</span>
-    </h3>
-
-    <div class="grid lg:grid-cols-2 gap-8">
-      <div class="bg-bgSurface border border-borderSoft rounded-2xl p-8 glow-border hover:shadow-neonSoft transition hover:-translate-y-1">
-        <h4 class="text-2xl font-black text-primary mb-3">FacturaNex Cloud</h4>
-        <p class="text-textSoft mb-6">
-          Web todo-en-uno: facturación ilimitada, POS, nómina electrónica, recepción DIAN y e-commerce básico.
-        </p>
-        <ul class="space-y-3 text-sm text-textSoft">
-          <li>✅ Facturación electrónica ilimitada</li>
-          <li>✅ POS electrónico</li>
-          <li>✅ Nómina electrónica</li>
-          <li>✅ Recepción DIAN & RADIAN</li>
-          <li>✅ E-commerce básico</li>
-          <li>✅ Certificado digital incluido</li>
-        </ul>
-      </div>
-
-      <div class="bg-bgSurface border border-borderSoft rounded-2xl p-8 glow-border hover:shadow-neonSoft transition hover:-translate-y-1">
-        <h4 class="text-2xl font-black text-primary mb-3">FacturaNex Integración XML</h4>
-        <p class="text-textSoft mb-6">
-          Aplicación local en Python que automatiza: XML → firma → validación → envío DIAN vía API.
-        </p>
-        <ul class="space-y-3 text-sm text-textSoft">
-          <li>✅ Integración con software que genera XML</li>
-          <li>✅ Automatización y firma digital</li>
-          <li>✅ Envío y respuesta DIAN vía API</li>
-          <li>✅ POS electrónico</li>
-          <li>✅ Certificado digital incluido</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos" class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-black text-center mb-12">
-      Mira FacturaNex <span class="text-primary">en acción</span>
-    </h3>
-<div class="grid lg:grid-cols-2 gap-10">
-
-  <!-- Video Cloud -->
-  <div
-    class="group glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6
-           hover:border-primary hover:shadow-neon transition cursor-pointer"
-    onclick="openVideoCloud()">
-
-    <div class="relative aspect-video rounded-2xl overflow-hidden border border-borderSoft">
-      <img
-        src="img/video-cloud.jpg"
-        alt="Video FacturaNex Cloud"
-        class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
-
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span class="material-symbols-outlined text-6xl text-primary">
-          play_circle
-        </span>
-      </div>
-    </div>
-
-    <h4 class="mt-5 text-xl font-bold">FacturaNex Cloud</h4>
-    <p class="text-textSoft text-sm mt-2">
-      Demo de la aplicación web: facturación, POS, inventario y reportes.
-    </p>
-
-  </div>
-
-  <!-- Video Integración -->
-  <div
-    class="group glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6
-           hover:border-primary hover:shadow-neon transition cursor-pointer"
-    onclick="openVideoIntegracion()">
-
-    <div class="relative aspect-video rounded-2xl overflow-hidden border border-borderSoft">
-      <img
-        src="img/video-integracion.jpg"
-        alt="Video Integración XML"
-        class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
-
-      <div class="absolute inset-0 flex items-center justify-center">
-        <span class="material-symbols-outlined text-6xl text-primary">
-          play_circle
-        </span>
-      </div>
-    </div>
-
-    <h4 class="mt-5 text-xl font-bold">Integración XML</h4>
-    <p class="text-textSoft text-sm mt-2">
-      Flujo técnico: XML → firma digital → envío y respuesta DIAN.
-    </p>
-
-  </div>
-
-</div>
-    <div class="mt-12 flex justify-center">
-      <a href="https://wa.me/573134276414" target="_blank" class="bg-primary hover:bg-primaryHover px-10 h-14 inline-flex items-center justify-center rounded-full font-bold shadow-neon transition hover:-translate-y-0.5">
-        Solicitar Demo en Vivo
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- MODULOS -->
-<section id="modulos" class="py-24 bg-bgSoft">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-black text-center mb-14">
-      Módulos <span class="text-primary">integrados</span>
-    </h3>
-
-    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <!-- Modulo Card -->
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">manage_search</span>
-        <h4 class="mt-4 font-bold text-lg">Búsqueda por NIT/Cédula</h4>
-        <p class="text-textSoft text-sm mt-2">Consulta automática en DIAN para evitar errores.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">inventory_2</span>
-        <h4 class="mt-4 font-bold text-lg">Inventario</h4>
-        <p class="text-textSoft text-sm mt-2">Stock, precios y productos en tiempo real.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">shopping_bag</span>
-        <h4 class="mt-4 font-bold text-lg">Compras</h4>
-        <p class="text-textSoft text-sm mt-2">Órdenes de compra y control de proveedores.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">point_of_sale</span>
-        <h4 class="mt-4 font-bold text-lg">POS</h4>
-        <p class="text-textSoft text-sm mt-2">Tirilla térmica, QR, CUFE y requisitos DIAN.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">payments</span>
-        <h4 class="mt-4 font-bold text-lg">Nómina Electrónica</h4>
-        <p class="text-textSoft text-sm mt-2">Emite nómina y transmite a la DIAN fácilmente.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">store</span>
-        <h4 class="mt-4 font-bold text-lg">E-commerce Básico</h4>
-        <p class="text-textSoft text-sm mt-2">Tienda online con pedidos y facturación integrada.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">query_stats</span>
-        <h4 class="mt-4 font-bold text-lg">Finanzas</h4>
-        <p class="text-textSoft text-sm mt-2">Ventas por día, cliente, producto, ingresos y más.</p>
-      </div>
-
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-2xl p-6 hover:shadow-neonSoft transition hover:-translate-y-1 hover:scale-[1.02]">
-        <span class="material-symbols-outlined text-primary text-4xl">security</span>
-        <h4 class="mt-4 font-bold text-lg">Certificado Digital</h4>
-        <p class="text-textSoft text-sm mt-2">Firma digital incluida en tus operaciones.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRECIOS (DARK) -->
-<section id="precios" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <h3 class="text-4xl font-black text-center mb-16">
-      Nuestros <span class="text-primary">Planes</span>
-    </h3>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <!-- Cloud -->
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-3xl p-10 shadow-xl hover:shadow-neonSoft transition hover:-translate-y-1">
-        <h4 class="font-bold text-lg text-textMain">FacturaNex Cloud desde</h4>
-        <p class="text-5xl font-black mt-4">$480.000 <span class="text-base font-medium text-textSoft">/ año</span></p>
-        <p class="mt-3 text-textSoft text-sm">
-          Todo lo que necesitas para operar en la nube con seguridad y rapidez.
-        </p>
-
-        <ul class="mt-6 space-y-3 text-sm text-textSoft">
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Facturación electrónica ilimitada</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> POS electrónico</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Nómina electrónica</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Recepción DIAN & RADIAN</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> E-commerce básico</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Certificado digital incluido</li>
-        </ul>
-        <button
-         onclick="sendWA('Hola, estoy interesado en FacturaNex Cloud')"
-         class="mt-8 w-full bg-primary hover:bg-primaryHover text-white font-bold py-4 rounded-full shadow-neon transition">
-         Adquirir por WhatsApp
-       </button>
-
-        </a>
-      </div>
-
-      <!-- Integración -->
-      <div class="glow-border bg-bgSurface border border-borderSoft rounded-3xl p-10 shadow-xl hover:shadow-neonSoft transition hover:-translate-y-1 relative">
-        <span class="absolute top-6 right-6 bg-primary text-white text-xs px-3 py-1 rounded-full">
-          Integración
-        </span>
-
-        <h4 class="font-bold text-lg text-textMain">Integración XML</h4>
-        <p class="text-5xl font-black mt-4">$400.000 <span class="text-base font-medium text-textSoft">/ año</span></p>
-        <p class="mt-3 text-textSoft text-sm">
-          Conecta tu ERP directamente y automatiza firma y envío DIAN con una app en Python.
-        </p>
-
-        <ul class="mt-6 space-y-3 text-sm text-textSoft">
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> API REST robusta</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Automatización XML + firma digital</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Envío y respuesta DIAN vía API</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> POS electrónico</li>
-          <li class="flex gap-2"><span class="text-primary font-bold">✔</span> Certificado digital incluido</li>
-        </ul>
-        <button
-         onclick="sendWA('Hola, estoy interesado en FacturaNex Integración XML')"
-         class="mt-8 w-full bg-primary hover:bg-primaryHover text-white font-bold py-4 rounded-full shadow-neon transition">
-         Adquirir por WhatsApp
-       </button>
-
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEMO -->
-<section id="demo" class="py-24 bg-bgSoft">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h3 class="text-4xl font-black">Agenda tu <span class="text-primary">demo</span></h3>
-      <p class="text-textSoft mt-3">
-        Te mostramos la plataforma y elegimos la mejor solución para tu negocio.
-      </p>
-    </div>
-
-    <div class="glow-border bg-bgSurface border border-borderSoft rounded-3xl p-10 shadow-xl">
-      <form onsubmit="sendWhatsApp(event)" class="grid gap-5">
-        <div class="grid md:grid-cols-2 gap-5">
-          <input id="name" required class="w-full h-14 rounded-xl bg-bgDark border border-borderSoft px-4" placeholder="Nombre completo">
-          <input id="company" required class="w-full h-14 rounded-xl bg-bgDark border border-borderSoft px-4" placeholder="Empresa">
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-5">
-          <input id="phone" required class="w-full h-14 rounded-xl bg-bgDark border border-borderSoft px-4" placeholder="WhatsApp / Teléfono">
-          <input id="email" required type="email" class="w-full h-14 rounded-xl bg-bgDark border border-borderSoft px-4" placeholder="Correo">
-        </div>
-
-        <div class="mt-2">
-          <p class="text-sm font-bold text-textSoft mb-3">Tipo de solución</p>
-          <div class="grid md:grid-cols-2 gap-4">
-            <label class="cursor-pointer glow-border bg-bgDark border border-borderSoft rounded-2xl p-4 flex items-center justify-between">
-              <span class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">cloud_done</span>
-                <span class="font-bold">FacturaNex Cloud</span>
-              </span>
-              <input type="radio" name="solution" value="Cloud" checked>
-            </label>
-
-            <label class="cursor-pointer glow-border bg-bgDark border border-borderSoft rounded-2xl p-4 flex items-center justify-between">
-              <span class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary">terminal</span>
-                <span class="font-bold">Integración XML</span>
-              </span>
-              <input type="radio" name="solution" value="Integración XML">
-            </label>
-          </div>
-        </div>
-
-        <button class="mt-4 h-14 w-full bg-primary hover:bg-primaryHover text-white font-bold rounded-full shadow-neon transition hover:-translate-y-0.5">
-          Solicitar Demo
-        </button>
-
-        <p class="text-xs text-textMuted text-center mt-2">
-          Tus datos están protegidos. Te contactaremos lo más pronto posible.
-        </p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-borderSoft py-10 text-center text-textMuted text-sm">
-  © 2025 FacturaNex · <strong class="text-textMain">Conexión Directa con la DIAN</strong>
-</footer>
-
-<!-- WHATSAPP FLOAT -->
-<button
-  onclick="sendWA('Hola 👋 quiero información sobre FacturaNex')"
-  class="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primaryHover w-14 h-14 rounded-full flex items-center justify-center shadow-neon transition hover:-translate-y-1"
-  aria-label="WhatsApp">
-  <span class="material-symbols-outlined text-white">chat</span>
-</button>
-<script>
-function sendWhatsApp(e){
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const company = document.getElementById("company").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const solution = document.querySelector('input[name="solution"]:checked')?.value || "No especificado";
-
-  const message =
-`Hola, quiero adquirir FacturaNex 🚀
-
-👤 Nombre: ${name}
-🏢 Empresa: ${company}
-📱 Teléfono: ${phone}
-📧 Email: ${email}
-💡 Solución: ${solution}`;
-
-  const url = "https://wa.me/573134276414?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-}
-</script>
-<script>
-function sendWA(message){
-  const phone = "573134276414";
-  const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-}
-</script>
-<script>
-function openVideoCloud(){
-  window.open("https://www.youtube.com/watch?v=oloAeUso3G8", "_blank");
-}
-
-function openVideoIntegracion(){
-  window.open("https://www.youtube.com/watch?v=qZEEPyfe0jM", "_blank");
-}
-</script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+        
+        // Navbar Scrolled Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-[#0A1128]/90', 'shadow-lg');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-3');
+            } else {
+                navbar.classList.remove('bg-[#0A1128]/90', 'shadow-lg');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-3');
+            }
+        });
+    </script>
+</body>
+</html>

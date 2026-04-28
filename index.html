@@ -296,105 +296,253 @@
         </div>
     </section>
 
-    <!-- Planes y Precios -->
-    <section id="planes" class="py-24 relative">
+    <!-- Sección de Planes y Precios -->
+    <section id="planes" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0A1128]/50 pointer-events-none"></div>
+        
         <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Encabezado de la Sección -->
             <div class="text-center mb-16" data-aos="fade-up">
-                <h3 class="text-4xl md:text-5xl font-bold">Un Modelo Simple y <span class="text-primary">Económico</span></h3>
-                <p class="text-textMuted mt-4 text-lg">Iniciamos la base con <strong class="text-white">solo $150.000</strong>. Luego, adaptamos el sistema a tu medida.</p>
-            </div>
-
-            <!-- Implementación Base Banner -->
-            <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 mb-12 shadow-[0_0_30px_rgba(216,27,96,0.1)]" data-aos="zoom-in">
-                <div>
-                    <span class="inline-flex items-center gap-1 bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
-                        Paso 1 (Obligatorio)
-                    </span>
-                    <h4 class="text-2xl font-bold text-white mb-2">Implementación Base</h4>
-                    <p class="text-textMuted text-sm">Todo lo indispensable para conectar tu empresa con la DIAN.</p>
-                    <ul class="mt-4 flex flex-wrap gap-4 text-sm font-medium">
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Certificado Digital Integrado</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Habilitación DIAN</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Gestión de Resolución</li>
-                    </ul>
-                </div>
-                <div class="text-center shrink-0">
-                    <span class="text-4xl font-black block">$150.000 <span class="text-sm font-normal text-textMuted">COP</span></span>
-                    <p class="text-xs text-textMuted mt-1 mb-3">Pago Inicial Requerido</p>
-                </div>
-            </div>
-
-            <div class="text-center mb-10"><h3 class="text-2xl font-bold text-white">¿Cómo deseas operar tu facturación?</h3></div>
-
-            <div class="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-2">Precios Claros y Flexibles</h2>
+                <h3 class="text-4xl md:text-5xl font-bold">Nuestros <span class="text-gradient">Planes</span> de Facturación</h3>
+                <p class="text-textMuted mt-4 text-lg">Elige el plan que mejor se adapte a tu necesidad operativa.</p>
                 
-                <!-- Opcion 1: Cloud -->
-                <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden" data-aos="flip-left">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
-                    <h4 class="text-2xl font-bold text-white mb-2">☁️ Uso FacturaNex Cloud</h4>
-                    <p class="text-textMuted text-sm h-10">Ideado para empresas que <strong>no tienen un software</strong> o sistema de ventas actual.</p>
-                    
-                    <div class="my-6">
-                        <p class="text-sm text-textMuted mb-2">Elige los módulos que operarán en tu Cloud:</p>
-                        <div class="grid grid-cols-2 gap-3 mb-6 font-bold">
-                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Facturación</span></div>
-                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">POS Electrónico</span></div>
-                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Nómina DIAN</span></div>
-                            <div class="bg-surface border border-white/5 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Doc. Soporte</span></div>
+                <!-- Selector de Tipo de Plan -->
+                <div class="mt-10 flex items-center justify-center gap-4">
+                    <span id="label-modulos" class="text-sm font-bold text-white transition-colors duration-300">Módulos Individuales</span>
+                    <button id="plan-toggle" class="relative w-16 h-8 rounded-full bg-white/10 border border-white/20 transition-all p-1">
+                        <div id="toggle-circle" class="w-6 h-6 rounded-full bg-primary shadow-[0_0_10px_rgba(216,27,96,0.5)] transition-all duration-300"></div>
+                    </button>
+                    <span id="label-paquetes" class="text-sm font-bold text-textMuted transition-colors duration-300">Paquetes con Ahorro</span>
+                </div>
+            </div>
+
+            <!-- Contenedor Principal de Grillas -->
+            <div class="relative min-h-[400px]">
+                
+                <!-- Grilla de Módulos (Visible por defecto) -->
+                <div id="container-modulos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+                    <!-- Modulo 1: Facturación -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
+                                <span class="material-symbols-outlined">receipt_long</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">Facturación Electrónica Ilimitada</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">Emisión ilimitada de facturas con firma digital y conexión DIAN.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
                         </div>
                     </div>
 
-                    <div class="flex-1 space-y-3 mb-10 text-sm">
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Sistema web propio totalmente amigable</div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Documentos operativos <strong>Ilimitados</strong></div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Pago de saldos disponible a 15 días</div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Incluye RADIAN y E-commerce Básico</div>
-                    </div>
-
-                    <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20iniciar%20con%20FacturaNex%20Cloud.%20Actualmente%20NO%20tengo%20software')" class="w-full py-4 text-center bg-primary hover:bg-primaryHover rounded-2xl font-bold transition-all text-white shadow-[0_0_20px_rgba(216,27,96,0.4)] relative z-10 hover:-translate-y-1">
-                        Elegir Solución Cloud
-                    </button>
-
-                    <!-- Mini visual placeholder abstract para cloud -->
-                    <div class="absolute bottom-0 right-0 w-full h-40 opacity-30 pointer-events-none bg-center bg-cover mix-blend-screen" style="background-image: url('img/cloud_infrastructure_facturanex_1776037739185.png'); mask-image: linear-gradient(to top, black, transparent);"></div>
-                </div>
-
-                <!-- Opcion 2: Integracion (Destacado) -->
-                <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] transform lg:-translate-y-4" data-aos="flip-right" data-aos-delay="200">
-                    <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
-                    <div class="absolute -top-10 -right-10">
-                        <span class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider transform rotate-12 inline-block shadow-lg">El Ecosistema Total</span>
-                    </div>
-                    
-                    <h4 class="text-2xl font-bold text-white mb-2 relative z-10">Integración API Avanzada (Ejecutable)</h4>
-                    <p class="text-textMuted text-sm h-10 relative z-10">Ideado para empresas que <strong>ya tienen un software/ERP</strong> y quieren acoplarnos la facturación.</p>
-                    
-                    <div class="my-6 relative z-10">
-                        <p class="text-sm text-textMuted mb-2">Conecta a la perfección estos módulos:</p>
-                        <div class="grid grid-cols-2 gap-3 mb-6 font-bold z-10 relative">
-                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Facturación</span></div>
-                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">POS Electrónico</span></div>
-                            <div class="bg-surface border border-primary/20 p-3 rounded-xl flex justify-center items-center text-sm"><span class="text-white">Doc. Soporte</span></div>
+                    <!-- Modulo 2: POS -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+                                <span class="material-symbols-outlined">point_of_sale</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">POS Electrónico Ilimitado</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">Facturación tipo tirilla térmica sin límites para tu punto de venta.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
                         </div>
                     </div>
 
-                    <div class="flex-1 space-y-3 mb-10 relative z-10 text-sm">
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Aplicación local en Python paralela</div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Flujo ágil: Lee XML → Firma → Envía a DIAN</div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Documentos de transacción <strong>Ilimitados</strong></div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Respuestas DIAN instantáneas por API</div>
-                        <div class="flex gap-2 text-white"><span class="text-primary font-bold">✓</span> Soporte humano y técnico especializado</div>
+                    <!-- Modulo 3: Plan Full -->
+                    <div class="glass-card p-8 rounded-3xl border-primary/40 shadow-[0_0_20px_rgba(216,27,96,0.1)] relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="absolute -top-4 -right-4 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-tighter">Más Solicitado</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">stars</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">Plan Full (Fact. + POS)</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">La solución total para facturación administrativa y de mostrador.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$450.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        </div>
                     </div>
 
-                    <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20iniciar%20con%20FacturaNex%20Integración%20(API).%20SÍ%20tengo%20software%20actualmente')" class="w-full py-4 text-center bg-primary hover:bg-primaryHover rounded-2xl font-bold transition-all text-white shadow-[0_0_20px_rgba(216,27,96,0.4)] relative z-10 hover:-translate-y-1">
-                        Elegir Integración XML
-                    </button>
-                    <!-- Mini visual placeholder abstract para integracion -->
-                    <div class="absolute bottom-0 right-0 w-full h-40 opacity-30 pointer-events-none bg-center bg-cover mix-blend-screen" style="background-image: url('img/xml_integration_api_1776036953581.png'); mask-image: linear-gradient(to top, black, transparent);"></div>
+                    <!-- Modulo 4: Nómina -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 border border-green-500/30">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">Nómina Electrónica</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">Cumple con la normativa de nómina electrónica de forma simple.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Modulo 5: Recepción -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 border border-orange-500/30">
+                                <span class="material-symbols-outlined">description</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">Recepción de Docs.</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">Automatiza la entrada de facturas de tus proveedores.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$300.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Modulo 6: Doc Soporte -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-12 w-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30">
+                                <span class="material-symbols-outlined">rule</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white leading-tight">Documento Soporte</h4>
+                        </div>
+                        <p class="text-textMuted text-sm mb-8 flex-1">Formaliza tus gastos con no obligados a facturar.</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-black text-white">$250.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Grilla de Paquetes (Oculta por defecto) -->
+                <div id="container-paquetes" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500">
+                    <!-- Paquete 1: Básico -->
+                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <h4 class="text-xl font-bold text-white mb-2">Plan Básico</h4>
+                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Ideal para empezar</p>
+                        <p class="text-4xl font-black text-white mb-8">$350.000</p>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Ilimitada</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Básico" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                    </div>
+
+                    <!-- Paquete 2: Comercial -->
+                    <div class="glass-card p-8 rounded-[2rem] border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl">Ahorro Directo</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Plan Comercial</h4>
+                        <p class="text-xs text-primary mb-6 uppercase tracking-widest font-bold">Más Recomendado</p>
+                        <p class="text-4xl font-black text-white mb-8">$450.000</p>
+                        <ul class="space-y-4 mb-10 flex-1 text-white">
+                            <li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-sm font-black">check_circle</span> Facturación Electrónica</li>
+                            <li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-sm font-black">check_circle</span> POS Electrónico</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Comercial" class="w-full py-3 bg-primary hover:bg-primaryHover text-white rounded-xl text-center text-sm font-bold shadow-lg transition-all mt-auto">Lo quiero ahora</a>
+                    </div>
+
+                    <!-- Paquete 3: Empresarial -->
+                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <h4 class="text-xl font-bold text-white mb-2">Plan Empresarial</h4>
+                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Negocios en Crecimiento</p>
+                        <p class="text-4xl font-black text-white mb-8">$650.000</p>
+                        <ul class="space-y-4 mb-10 flex-1">
+                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación + POS</li>
+                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Recepción de Docs.</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Empresarial" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                    </div>
+
+                    <!-- Paquete 4: Full Contable -->
+                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <h4 class="text-xl font-bold text-white mb-2">Plan Full Contable</h4>
+                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Control Total</p>
+                        <p class="text-4xl font-black text-white mb-8">$900.000</p>
+                        <ul class="space-y-4 mb-10 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación + POS</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Nómina + Recepción</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documento Soporte</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Full%20Contable" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Modelos de Implementación (Cloud / API) -->
+            <div class="mt-24 pt-24 border-t border-white/5 w-full">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h3 class="text-3xl md:text-4xl font-bold">Modelos de <span class="text-primary">Implementación</span></h3>
+                    <p class="text-textMuted mt-4 text-lg">Independientemente de tu plan, elige cómo deseas operar.</p>
+                </div>
+
+                <!-- Banner de Implementación Base -->
+                <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 mb-12 shadow-[0_0_30px_rgba(216,27,96,0.1)] w-full" data-aos="zoom-in">
+                    <div class="flex-1 text-left">
+                        <span class="inline-flex items-center gap-1 bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+                            Paso 1 (Obligatorio)
+                        </span>
+                        <h4 class="text-2xl font-bold text-white mb-2">Implementación Base</h4>
+                        <p class="text-textMuted text-sm mb-4">Todo lo indispensable para conectar tu empresa con la DIAN.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs font-medium text-white/80">
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Certificado Digital</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Habilitación DIAN</div>
+                            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400 text-sm">check</span> Gestión de Resolución</div>
+                        </div>
+                    </div>
+                    <div class="text-center shrink-0 flex flex-col justify-center">
+                        <span class="text-4xl font-black text-white">$150.000 <span class="text-sm font-normal text-textMuted">COP</span></span>
+                        <p class="text-xs text-textMuted mt-1">Pago Inicial Requerido</p>
+                    </div>
+                </div>
+
+                <!-- Opciones de Operación (Cloud vs API) -->
+                <div class="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto w-full">
+                    <!-- Opción Cloud -->
+                    <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden" data-aos="flip-left">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
+                        <h4 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">☁️ Uso FacturaNex Cloud</h4>
+                        <p class="text-textMuted text-sm mb-6">Para empresas que <strong>no tienen un software</strong> o sistema de ventas actual.</p>
+                        
+                        <div class="mb-8">
+                            <p class="text-xs text-textMuted mb-3 uppercase tracking-widest font-bold">Módulos Disponibles:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-surface border border-white/5 px-3 py-1.5 rounded-lg text-xs font-bold text-white">Facturación</span>
+                                <span class="bg-surface border border-white/5 px-3 py-1.5 rounded-lg text-xs font-bold text-white">POS</span>
+                                <span class="bg-surface border border-white/5 px-3 py-1.5 rounded-lg text-xs font-bold text-white">Nómina</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 mb-10 text-sm text-white/90">
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Sistema web propio amigable</div>
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Documentos <strong>Ilimitados</strong></div>
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Soporte técnico incluido</div>
+                        </div>
+
+                        <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20FacturaNex%20Cloud')" class="w-full py-4 bg-primary hover:bg-primaryHover text-white rounded-2xl font-bold transition-all shadow-lg mt-auto">Elegir Cloud</button>
+                    </div>
+
+                    <!-- Opción Integración API -->
+                    <div class="glass-card rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)]" data-aos="flip-right" data-aos-delay="200">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+                        <h4 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">⚙️ Integración API</h4>
+                        <p class="text-textMuted text-sm mb-6">Para empresas que <strong>ya tienen un software/ERP</strong> y quieren conectar la DIAN.</p>
+                        
+                        <div class="mb-8">
+                            <p class="text-xs text-textMuted mb-3 uppercase tracking-widest font-bold">Capacidades:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-surface border border-primary/20 px-3 py-1.5 rounded-lg text-xs font-bold text-white">Firma XML</span>
+                                <span class="bg-surface border border-primary/20 px-3 py-1.5 rounded-lg text-xs font-bold text-white">Envío Directo</span>
+                                <span class="bg-surface border border-primary/20 px-3 py-1.5 rounded-lg text-xs font-bold text-white">API REST</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 mb-10 text-sm text-white/90">
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Aplicación local de alto rendimiento</div>
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Gestión de errores en tiempo real</div>
+                            <div class="flex items-start gap-2"><span class="text-primary font-bold">✓</span> Documentos <strong>Ilimitados</strong></div>
+                        </div>
+
+                        <button onclick="window.open('https://wa.me/573155155512?text=Hola,%20me%20interesa%20Integración%20API')" class="w-full py-4 bg-primary hover:bg-primaryHover text-white rounded-2xl font-bold transition-all shadow-lg mt-auto">Elegir Integración</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje Personalizado -->
+            <div class="mt-16 text-center">
+                <p class="text-textMuted text-sm">¿Necesitas algo a medida? <a href="https://wa.me/573155155512" class="text-primary font-bold hover:underline">Habla con un asesor experto</a></p>
             </div>
         </div>
     </section>
@@ -580,6 +728,38 @@
             duration: 800,
             easing: 'ease-out-cubic',
         });
+
+        // Plan Toggle Logic
+        const planToggle = document.getElementById('plan-toggle');
+        const toggleCircle = document.getElementById('toggle-circle');
+        const containerModulos = document.getElementById('container-modulos');
+        const containerPaquetes = document.getElementById('container-paquetes');
+        const labelModulos = document.getElementById('label-modulos');
+        const labelPaquetes = document.getElementById('label-paquetes');
+
+        let isPaquetes = false;
+
+        planToggle.addEventListener('click', () => {
+            isPaquetes = !isPaquetes;
+            
+            if (isPaquetes) {
+                toggleCircle.style.transform = 'translateX(32px)';
+                containerModulos.classList.add('hidden');
+                containerPaquetes.classList.remove('hidden');
+                labelPaquetes.classList.remove('text-textMuted');
+                labelPaquetes.classList.add('text-white');
+                labelModulos.classList.remove('text-white');
+                labelModulos.classList.add('text-textMuted');
+            } else {
+                toggleCircle.style.transform = 'translateX(0)';
+                containerModulos.classList.remove('hidden');
+                containerPaquetes.classList.add('hidden');
+                labelModulos.classList.remove('text-textMuted');
+                labelModulos.classList.add('text-white');
+                labelPaquetes.classList.remove('text-white');
+                labelPaquetes.classList.add('text-textMuted');
+            }
+        });
         
         // Navbar Scrolled Effect
         const navbar = document.getElementById('navbar');
@@ -597,5 +777,7 @@
     </script>
 </body>
 </html>
+
+
 
 

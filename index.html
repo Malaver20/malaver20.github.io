@@ -305,159 +305,413 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-primary font-bold tracking-widest text-sm uppercase mb-2">Precios Claros y Flexibles</h2>
                 <h3 class="text-4xl md:text-5xl font-bold">Nuestros <span class="text-gradient">Planes</span> de Facturación</h3>
-                <p class="text-textMuted mt-4 text-lg">Elige el plan que mejor se adapte a tu necesidad operativa.</p>
-                
-                <!-- Selector de Tipo de Plan -->
-                <div class="mt-10 flex items-center justify-center gap-4">
-                    <span id="label-modulos" class="text-sm font-bold text-white transition-colors duration-300">Módulos Individuales</span>
-                    <button id="plan-toggle" class="relative w-16 h-8 rounded-full bg-white/10 border border-white/20 transition-all p-1">
-                        <div id="toggle-circle" class="w-6 h-6 rounded-full bg-primary shadow-[0_0_10px_rgba(216,27,96,0.5)] transition-all duration-300"></div>
-                    </button>
-                    <span id="label-paquetes" class="text-sm font-bold text-textMuted transition-colors duration-300">Paquetes con Ahorro</span>
+                <p class="text-textMuted mt-4 text-lg">Elige el plan que mejor se adapte a tu necesidad operativa. Cada módulo se activa de forma independiente.</p>
+            </div>
+
+            <!-- ── BLOQUE 1: Módulos Individuales ── -->
+            <div class="mb-6" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <div class="flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 bg-white/5">
+                        <span class="material-symbols-outlined text-primary text-base">extension</span>
+                        <span class="text-sm font-bold text-white uppercase tracking-widest">Módulos Individuales</span>
+                    </div>
+                    <div class="h-px flex-1 bg-white/10"></div>
+                </div>
+                <p class="text-center text-textMuted text-sm mb-10 -mt-4">Adquiere solo los módulos que necesitas. Documentos ilimitados en todos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+                <!-- Modulo 1: Facturación -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
+                            <span class="material-symbols-outlined">receipt_long</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">Facturación Electrónica Ilimitada</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">Emisión ilimitada de facturas con firma digital y conexión DIAN.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20m%C3%B3dulo%20de%20Facturaci%C3%B3n%20Electr%C3%B3nica" class="mt-4 w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all block">Contratar Módulo</a>
+                    </div>
+                </div>
+
+                <!-- Modulo 2: POS -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+                            <span class="material-symbols-outlined">point_of_sale</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">POS Electrónico Ilimitado</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">Facturación tipo tirilla térmica sin límites para tu punto de venta.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20m%C3%B3dulo%20POS%20Electr%C3%B3nico" class="mt-4 w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all block">Contratar Módulo</a>
+                    </div>
+                </div>
+
+                <!-- Modulo 3: Plan Full -->
+                <div class="glass-card p-8 rounded-3xl border-primary/40 shadow-[0_0_20px_rgba(216,27,96,0.1)] relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-3xl uppercase tracking-wider">Más Solicitado</div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">stars</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">Plan Full (Fact. + POS)</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">La solución total para facturación administrativa y de mostrador.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$450.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Full%20(Fact.%20%2B%20POS)" class="mt-4 w-full py-3 bg-primary hover:bg-primaryHover text-white rounded-xl text-center text-sm font-bold transition-all block shadow-lg">Lo quiero ahora</a>
+                    </div>
+                </div>
+
+                <!-- Modulo 4: Nómina -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 border border-green-500/30">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">Nómina Electrónica</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">Cumple con la normativa de nómina electrónica de forma simple.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20m%C3%B3dulo%20de%20N%C3%B3mina%20Electr%C3%B3nica" class="mt-4 w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all block">Contratar Módulo</a>
+                    </div>
+                </div>
+
+                <!-- Modulo 5: Recepción -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 border border-orange-500/30">
+                            <span class="material-symbols-outlined">description</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">Recepción de Docs.</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">Automatiza la entrada de facturas de tus proveedores.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$300.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20m%C3%B3dulo%20de%20Recepci%C3%B3n%20de%20Documentos" class="mt-4 w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all block">Contratar Módulo</a>
+                    </div>
+                </div>
+
+                <!-- Modulo 6: Doc Soporte -->
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-12 w-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30">
+                            <span class="material-symbols-outlined">rule</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white leading-tight">Documento Soporte</h4>
+                    </div>
+                    <p class="text-textMuted text-sm mb-8 flex-1">Formaliza tus gastos con no obligados a facturar.</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-white">$250.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20m%C3%B3dulo%20de%20Documento%20Soporte" class="mt-4 w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all block">Contratar Módulo</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Contenedor Principal de Grillas -->
-            <div class="relative min-h-[400px]">
-                
-                <!-- Grilla de Módulos (Visible por defecto) -->
-                <div id="container-modulos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
-                    <!-- Modulo 1: Facturación -->
-                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary border border-primary/30">
-                                <span class="material-symbols-outlined">receipt_long</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">Facturación Electrónica Ilimitada</h4>
-                        </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">Emisión ilimitada de facturas con firma digital y conexión DIAN.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
+            <!-- ── BLOQUE 2: Paquetes con Ahorro ── -->
+            <div class="mb-6" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-px flex-1 bg-white/10"></div>
+                    <div class="flex items-center gap-2 px-5 py-2 rounded-full border border-primary/40 bg-primary/10">
+                        <span class="material-symbols-outlined text-primary text-base">local_offer</span>
+                        <span class="text-sm font-bold text-primary uppercase tracking-widest">Paquetes con Ahorro</span>
                     </div>
+                    <div class="h-px flex-1 bg-white/10"></div>
+                </div>
+                <p class="text-center text-textMuted text-sm mb-10 -mt-4">Planes todo-en-uno con facturación electrónica incluida y documentos por volumen.</p>
+            </div>
 
-                    <!-- Modulo 2: POS -->
-                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
-                                <span class="material-symbols-outlined">point_of_sale</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">POS Electrónico Ilimitado</h4>
-                        </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">Facturación tipo tirilla térmica sin límites para tu punto de venta.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-                    <!-- Modulo 3: Plan Full -->
-                    <div class="glass-card p-8 rounded-3xl border-primary/40 shadow-[0_0_20px_rgba(216,27,96,0.1)] relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="absolute -top-4 -right-4 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-tighter">Más Solicitado</div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined">stars</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">Plan Full (Fact. + POS)</h4>
+                <!-- Paquete 1: Emprendedor 50 -->
+                <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 border border-sky-500/30">
+                            <span class="material-symbols-outlined text-base">store</span>
                         </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">La solución total para facturación administrativa y de mostrador.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$450.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Emprendedor 50</h4>
                     </div>
-
-                    <!-- Modulo 4: Nómina -->
-                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400 border border-green-500/30">
-                                <span class="material-symbols-outlined">payments</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">Nómina Electrónica</h4>
-                        </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">Cumple con la normativa de nómina electrónica de forma simple.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$350.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
-                    </div>
-
-                    <!-- Modulo 5: Recepción -->
-                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 border border-orange-500/30">
-                                <span class="material-symbols-outlined">description</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">Recepción de Docs.</h4>
-                        </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">Automatiza la entrada de facturas de tus proveedores.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$300.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
-                    </div>
-
-                    <!-- Modulo 6: Doc Soporte -->
-                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden flex flex-col h-full" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="h-12 w-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 border border-purple-500/30">
-                                <span class="material-symbols-outlined">rule</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-white leading-tight">Documento Soporte</h4>
-                        </div>
-                        <p class="text-textMuted text-sm mb-8 flex-1">Formaliza tus gastos con no obligados a facturar.</p>
-                        <div class="mt-auto">
-                            <p class="text-3xl font-black text-white">$250.000 <span class="text-sm font-normal text-textMuted">/ año</span></p>
-                        </div>
-                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                    <p class="text-xs text-sky-400 font-bold mb-4">50 documentos / año</p>
+                    <p class="text-3xl font-black text-white mb-6">$150.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 50 documentos</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Emprendedor%2050" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
                 </div>
 
-                <!-- Grilla de Paquetes (Oculta por defecto) -->
-                <div id="container-paquetes" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500">
-                    <!-- Paquete 1: Básico -->
-                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
-                        <h4 class="text-xl font-bold text-white mb-2">Plan Básico</h4>
-                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Ideal para empezar</p>
-                        <p class="text-4xl font-black text-white mb-8">$350.000</p>
-                        <ul class="space-y-4 mb-10 flex-1">
-                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Ilimitada</li>
+                <!-- Paquete 2: Inicial 100 -->
+                <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 border border-teal-500/30">
+                            <span class="material-symbols-outlined text-base">receipt</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Inicial 100</h4>
+                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                    <p class="text-xs text-teal-400 font-bold mb-4">100 documentos / año</p>
+                    <p class="text-3xl font-black text-white mb-6">$210.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 100 documentos</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Inicial%20100" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                </div>
+
+                <!-- Paquete 3: Pyme 250 -->
+                <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-400 border border-violet-500/30">
+                            <span class="material-symbols-outlined text-base">business_center</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Pyme 250</h4>
+                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                    <p class="text-xs text-violet-400 font-bold mb-4">250 documentos / año</p>
+                    <p class="text-3xl font-black text-white mb-6">$290.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 250 documentos</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Pyme%20250" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                </div>
+
+                <!-- Paquete 4: Negocio 500 -->
+                <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 border border-amber-500/30">
+                            <span class="material-symbols-outlined text-base">trending_up</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Negocio 500</h4>
+                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                    <p class="text-xs text-amber-400 font-bold mb-4">500 documentos / año</p>
+                    <p class="text-3xl font-black text-white mb-6">$350.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 500 documentos</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Negocio%20500" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                </div>
+
+                <!-- Paquete 5: Comercial Ilimitado — DESTACADO -->
+                <div class="glass-card p-7 rounded-[2rem] border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] flex flex-col h-full relative overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-[2rem] uppercase tracking-wider">Más Popular</div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-base">stars</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Comercial Ilimitado</h4>
+                    </div>
+                    <p class="text-xs text-primary font-bold mb-1 mt-2 uppercase tracking-widest">Fact. Electrónica + POS</p>
+                    <p class="text-xs text-primary font-bold mb-4">✦ Documentos Ilimitados</p>
+                    <p class="text-3xl font-black text-white mb-6">$450.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-white/80">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Electrónica</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> POS Electrónico</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documentos ilimitados</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte prioritario</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Comercial%20Ilimitado" class="w-full py-3 bg-primary hover:bg-primaryHover text-white rounded-xl text-center text-sm font-bold shadow-lg transition-all mt-auto">Lo quiero ahora</a>
+                </div>
+
+                <!-- Paquete 6: Empresarial -->
+                <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+                            <span class="material-symbols-outlined text-base">corporate_fare</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Empresarial</h4>
+                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Fact. + POS + Recepción de Docs</p>
+                    <p class="text-xs text-blue-400 font-bold mb-4">✦ Documentos Ilimitados</p>
+                    <p class="text-3xl font-black text-white mb-6">$650.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Electrónica</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> POS Electrónico</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Recepción de Documentos</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documentos ilimitados</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Empresarial" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                </div>
+
+                <!-- Paquete 7: Full Contable -->
+                <div class="glass-card p-7 rounded-[2rem] border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.08)] flex flex-col h-full relative overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-tight">Control Total</div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <div class="h-8 w-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 border border-emerald-500/30">
+                            <span class="material-symbols-outlined text-base">account_balance</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white leading-tight">Plan Full Contable</h4>
+                    </div>
+                    <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Fact. + POS + Nómina + Soporte + Recepción</p>
+                    <p class="text-xs text-emerald-400 font-bold mb-4">✦ Documentos Ilimitados</p>
+                    <p class="text-3xl font-black text-white mb-6">$900.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                    <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Facturación + POS</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Nómina Electrónica</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Documento Soporte</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Recepción de Docs.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Documentos ilimitados</li>
+                    </ul>
+                    <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Full%20Contable" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                </div>
+
+            </div>
+
+            <!-- Sección de Modelos de Implementación (Cloud / API) -->
+                <div id="container-paquetes" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-500">
+
+                    <!-- Paquete 1: Emprendedor 50 -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-sky-500/20 flex items-center justify-center text-sky-400 border border-sky-500/30">
+                                <span class="material-symbols-outlined text-base">store</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Emprendedor 50</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                        <p class="text-xs text-sky-400 font-bold mb-4">50 documentos / año</p>
+                        <p class="text-3xl font-black text-white mb-6">$150.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 50 documentos</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
                         </ul>
-                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Básico" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Emprendedor%2050" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
                     </div>
 
-                    <!-- Paquete 2: Comercial -->
-                    <div class="glass-card p-8 rounded-[2rem] border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] flex flex-col h-full relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl">Ahorro Directo</div>
-                        <h4 class="text-xl font-bold text-white mb-2">Plan Comercial</h4>
-                        <p class="text-xs text-primary mb-6 uppercase tracking-widest font-bold">Más Recomendado</p>
-                        <p class="text-4xl font-black text-white mb-8">$450.000</p>
-                        <ul class="space-y-4 mb-10 flex-1 text-white">
-                            <li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-sm font-black">check_circle</span> Facturación Electrónica</li>
-                            <li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-sm font-black">check_circle</span> POS Electrónico</li>
+                    <!-- Paquete 2: Inicial 100 -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400 border border-teal-500/30">
+                                <span class="material-symbols-outlined text-base">receipt</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Inicial 100</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                        <p class="text-xs text-teal-400 font-bold mb-4">100 documentos / año</p>
+                        <p class="text-3xl font-black text-white mb-6">$210.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 100 documentos</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
                         </ul>
-                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Comercial" class="w-full py-3 bg-primary hover:bg-primaryHover text-white rounded-xl text-center text-sm font-bold shadow-lg transition-all mt-auto">Lo quiero ahora</a>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Inicial%20100" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
                     </div>
 
-                    <!-- Paquete 3: Empresarial -->
-                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
-                        <h4 class="text-xl font-bold text-white mb-2">Plan Empresarial</h4>
-                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Negocios en Crecimiento</p>
-                        <p class="text-4xl font-black text-white mb-8">$650.000</p>
-                        <ul class="space-y-4 mb-10 flex-1">
-                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación + POS</li>
-                            <li class="flex items-center gap-2 text-sm text-textMuted"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Recepción de Docs.</li>
+                    <!-- Paquete 3: Pyme 250 -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-400 border border-violet-500/30">
+                                <span class="material-symbols-outlined text-base">business_center</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Pyme 250</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                        <p class="text-xs text-violet-400 font-bold mb-4">250 documentos / año</p>
+                        <p class="text-3xl font-black text-white mb-6">$290.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 250 documentos</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Pyme%20250" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                    </div>
+
+                    <!-- Paquete 4: Negocio 500 -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 border border-amber-500/30">
+                                <span class="material-symbols-outlined text-base">trending_up</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Negocio 500</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Facturación Electrónica</p>
+                        <p class="text-xs text-amber-400 font-bold mb-4">500 documentos / año</p>
+                        <p class="text-3xl font-black text-white mb-6">$350.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación DIAN</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Hasta 500 documentos</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte incluido</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Negocio%20500" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                    </div>
+
+                    <!-- Paquete 5: Comercial Ilimitado — DESTACADO -->
+                    <div class="glass-card p-7 rounded-[2rem] border-primary/50 shadow-[0_0_30px_rgba(216,27,96,0.15)] flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-tight">Más Popular</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined text-base">stars</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Comercial Ilimitado</h4>
+                        </div>
+                        <p class="text-xs text-primary font-bold mb-1 mt-2 uppercase tracking-widest">Fact. Electrónica + POS</p>
+                        <p class="text-xs text-primary font-bold mb-4">✦ Documentos Ilimitados</p>
+                        <p class="text-3xl font-black text-white mb-6">$450.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-white/80">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Electrónica</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> POS Electrónico</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documentos ilimitados</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Soporte prioritario</li>
+                        </ul>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Comercial%20Ilimitado" class="w-full py-3 bg-primary hover:bg-primaryHover text-white rounded-xl text-center text-sm font-bold shadow-lg transition-all mt-auto">Lo quiero ahora</a>
+                    </div>
+
+                    <!-- Paquete 6: Empresarial -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-white/5 flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/30">
+                                <span class="material-symbols-outlined text-base">corporate_fare</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Empresarial</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Fact. + POS + Recepción de Docs</p>
+                        <p class="text-xs text-blue-400 font-bold mb-4">✦ Documentos Ilimitados</p>
+                        <p class="text-3xl font-black text-white mb-6">$650.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación Electrónica</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> POS Electrónico</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Recepción de Documentos</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documentos ilimitados</li>
                         </ul>
                         <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Empresarial" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
                     </div>
 
-                    <!-- Paquete 4: Full Contable -->
-                    <div class="glass-card p-8 rounded-[2rem] border border-white/5 flex flex-col h-full">
-                        <h4 class="text-xl font-bold text-white mb-2">Plan Full Contable</h4>
-                        <p class="text-xs text-textMuted mb-6 uppercase tracking-widest">Control Total</p>
-                        <p class="text-4xl font-black text-white mb-8">$900.000</p>
-                        <ul class="space-y-4 mb-10 flex-1 text-xs text-textMuted">
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Facturación + POS</li>
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Nómina + Recepción</li>
-                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Documento Soporte</li>
+                    <!-- Paquete 7: Full Contable -->
+                    <div class="glass-card p-7 rounded-[2rem] border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.08)] flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl uppercase tracking-tight">Control Total</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <div class="h-8 w-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 border border-emerald-500/30">
+                                <span class="material-symbols-outlined text-base">account_balance</span>
+                            </div>
+                            <h4 class="text-base font-bold text-white leading-tight">Plan Full Contable</h4>
+                        </div>
+                        <p class="text-xs text-textMuted mb-1 mt-2 uppercase tracking-widest">Fact. + POS + Nómina + Soporte + Recepción</p>
+                        <p class="text-xs text-emerald-400 font-bold mb-4">✦ Documentos Ilimitados</p>
+                        <p class="text-3xl font-black text-white mb-6">$900.000<span class="text-sm font-normal text-textMuted"> /año</span></p>
+                        <ul class="space-y-2 mb-8 flex-1 text-xs text-textMuted">
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Facturación + POS</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Nómina Electrónica</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Documento Soporte</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Recepción de Docs.</li>
+                            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Documentos ilimitados</li>
                         </ul>
-                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Full%20Contable" class="w-full py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
+                        <a href="https://wa.me/573155155512?text=Me%20interesa%20el%20Plan%20Full%20Contable" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-center text-sm font-bold transition-all mt-auto">Elegir Plan</a>
                     </div>
+
                 </div>
             </div>
 
@@ -685,6 +939,330 @@
         </div>
     </section>
 
+    <!-- ================================================================= -->
+    <!-- MÓDULO 1: GASTROBAR PRO — Restaurantes integrado con POS        -->
+    <!-- MÓDULO 2: CRM FIDELIZACIÓN — integrado con Cotización y Factura -->
+    <!-- Cada módulo se activa de forma independiente                     -->
+    <!-- ================================================================= -->
+    <section id="gastrobar" class="py-24 relative overflow-hidden">
+
+        <!-- Fondo decorativo cálido -->
+        <div class="absolute inset-0 pointer-events-none -z-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#0d0a04]/80 via-transparent to-transparent"></div>
+            <div class="absolute top-1/4 right-0 w-[600px] h-[600px] bg-orange-500/8 rounded-full filter blur-[120px]"></div>
+            <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-amber-500/8 rounded-full filter blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <!-- ══════════════════════════════════════════════ -->
+            <!--  MÓDULO A: GASTROBAR PRO                       -->
+            <!-- ══════════════════════════════════════════════ -->
+            <div class="mb-24">
+
+                <!-- Header GastroBar PRO -->
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/30 text-orange-400 text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest mb-6">
+                        <span class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+                        Módulo Independiente — Activable por separado
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black mb-4 leading-tight">
+                        <span style="background: linear-gradient(to right, #f97316, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">GastroBar PRO</span>
+                    </h2>
+                    <p class="text-xl text-textMuted max-w-3xl mx-auto leading-relaxed">
+                        Módulo especializado para <strong class="text-white">restaurantes y gastro bares</strong>.
+                        Panel móvil para meseros + comandas inteligentes a cocina, <strong class="text-orange-400">integrado con tu POS Electrónico</strong>.
+                    </p>
+                    <!-- Integraciones badge -->
+                    <div class="flex flex-wrap justify-center gap-3 mt-6">
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(249,115,22,0.2); border: 1px solid rgba(249,115,22,0.4);">🔗 Integrado con POS Electrónico</span>
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35);">📱 Panel Móvil Meseros</span>
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.35);">📋 Comandas a Cocina</span>
+                    </div>
+                </div>
+
+                <!-- Grid funcionalidades GastroBar PRO -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
+
+                    <!-- Gestión de Mesas -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="50"
+                         style="background: linear-gradient(145deg, rgba(249,115,22,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(249,115,22,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(249,115,22,0.55)'; this.style.boxShadow='0 8px 32px rgba(249,115,22,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(249,115,22,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🪑</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Gestión de Mesas</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-orange-400">✓</span> Estado en tiempo real</li>
+                            <li class="flex gap-1.5"><span class="text-orange-400">✓</span> Cambio y unión de mesas</li>
+                            <li class="flex gap-1.5"><span class="text-orange-400">✓</span> División de cuentas</li>
+                            <li class="flex gap-1.5"><span class="text-orange-400">✓</span> Reservas de mesas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Comandas Inteligentes -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="100"
+                         style="background: linear-gradient(145deg, rgba(245,158,11,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(245,158,11,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(245,158,11,0.55)'; this.style.boxShadow='0 8px 32px rgba(245,158,11,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(245,158,11,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📋</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Comandas a Cocina</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-amber-400">✓</span> Envío automático a cocina</li>
+                            <li class="flex gap-1.5"><span class="text-amber-400">✓</span> Separación por áreas</li>
+                            <li class="flex gap-1.5"><span class="text-amber-400">✓</span> Historial de comandas</li>
+                            <li class="flex gap-1.5"><span class="text-amber-400">✓</span> Prioridad de pedidos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Módulo Móvil Meseros -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="150"
+                         style="background: linear-gradient(145deg, rgba(239,68,68,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(239,68,68,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(239,68,68,0.55)'; this.style.boxShadow='0 8px 32px rgba(239,68,68,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(239,68,68,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📱</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">App Móvil Meseros</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-red-400">✓</span> Pedidos desde celular</li>
+                            <li class="flex gap-1.5"><span class="text-red-400">✓</span> Apertura/cierre de mesa</li>
+                            <li class="flex gap-1.5"><span class="text-red-400">✓</span> Consulta de productos</li>
+                            <li class="flex gap-1.5"><span class="text-red-400">✓</span> Impresión inalámbrica</li>
+                        </ul>
+                    </div>
+
+                    <!-- Caja y Ventas -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="200"
+                         style="background: linear-gradient(145deg, rgba(34,197,94,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(34,197,94,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(34,197,94,0.55)'; this.style.boxShadow='0 8px 32px rgba(34,197,94,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(34,197,94,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">💰</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Caja y Ventas</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-green-400">✓</span> Apertura/cierre de caja</li>
+                            <li class="flex gap-1.5"><span class="text-green-400">✓</span> Control de propinas</li>
+                            <li class="flex gap-1.5"><span class="text-green-400">✓</span> Múltiples medios de pago</li>
+                            <li class="flex gap-1.5"><span class="text-green-400">✓</span> Descuentos y cortesías</li>
+                        </ul>
+                    </div>
+
+                    <!-- Inventario y Reportes -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="250"
+                         style="background: linear-gradient(145deg, rgba(168,85,247,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(168,85,247,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(168,85,247,0.55)'; this.style.boxShadow='0 8px 32px rgba(168,85,247,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(168,85,247,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📦</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Inventario & Reportes</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-purple-400">✓</span> Descuento automático ingredientes</li>
+                            <li class="flex gap-1.5"><span class="text-purple-400">✓</span> Control de recetas</li>
+                            <li class="flex gap-1.5"><span class="text-purple-400">✓</span> Alertas agotados</li>
+                            <li class="flex gap-1.5"><span class="text-purple-400">✓</span> Ventas por mesero / horas pico</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Imágenes reales GastroBar PRO -->
+                <div class="grid md:grid-cols-2 gap-6 mb-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-2xl overflow-hidden relative group" style="border: 1px solid rgba(249,115,22,0.25);">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="img/Celular_mesero.jpeg" alt="App móvil para meseros - GastroBar PRO" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 z-20 p-4">
+                            <p class="text-white font-bold text-sm">📱 App Móvil Meseros</p>
+                            <p class="text-orange-300 text-xs">Toma pedidos desde cualquier celular o tablet</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden relative group" style="border: 1px solid rgba(245,158,11,0.25);">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="img/Cocina_KDS.jpg" alt="Pantalla KDS cocina - Comandas inteligentes GastroBar PRO" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 z-20 p-4">
+                            <p class="text-white font-bold text-sm">📋 Pantalla KDS — Cocina</p>
+                            <p class="text-amber-300 text-xs">Comandas en tiempo real directo a la pantalla de cocina</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA GastroBar PRO -->
+                <div class="max-w-3xl mx-auto rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6" data-aos="fade-up"
+                     style="background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(239,68,68,0.08)); border: 1px solid rgba(249,115,22,0.3);">
+                    <div>
+                        <p class="text-white font-bold text-lg mb-1">🍽️ GastroBar PRO</p>
+                        <p class="text-textMuted text-sm">Módulo independiente — se activa sin depender del CRM</p>
+                    </div>
+                    <a href="https://wa.me/573155155512?text=Hola%2C%20me%20interesa%20el%20m%C3%B3dulo%20GastroBar%20PRO%20(sin%20CRM)%20para%20mi%20restaurante" target="_blank"
+                       class="flex-shrink-0 inline-flex items-center gap-2 text-white font-bold py-3 px-8 rounded-full text-sm transition-all hover:-translate-y-1 hover:scale-105"
+                       style="background: linear-gradient(135deg, #f97316, #ef4444); box-shadow: 0 0 24px rgba(249,115,22,0.45);">
+                        <span class="material-symbols-outlined text-base">restaurant</span>
+                        Cotizar GastroBar PRO
+                    </a>
+                </div>
+
+            </div><!-- /fin MÓDULO A -->
+
+            <!-- Divisor entre módulos -->
+            <div class="flex items-center gap-6 mb-24" data-aos="fade-up">
+                <div class="h-px flex-1" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);"></div>
+                <span class="text-xs text-textMuted uppercase tracking-widest font-bold px-4 py-2 rounded-full" style="border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);">Módulos Independientes</span>
+                <div class="h-px flex-1" style="background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);"></div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════ -->
+            <!--  MÓDULO B: CRM FIDELIZACIÓN                    -->
+            <!-- ══════════════════════════════════════════════ -->
+            <div>
+
+                <!-- Header CRM -->
+                <div class="text-center mb-14" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-2 border text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest mb-6"
+                         style="background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.35); color: #f472b6;">
+                        <span class="w-2 h-2 rounded-full animate-pulse" style="background: #f472b6;"></span>
+                        Módulo Independiente — Activable por separado
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black mb-4 leading-tight">
+                        <span style="background: linear-gradient(to right, #ec4899, #8b5cf6, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CRM Fidelización</span>
+                    </h2>
+                    <p class="text-xl text-textMuted max-w-3xl mx-auto leading-relaxed">
+                        Módulo de gestión de clientes completamente independiente.
+                        Cotizaciones, historial de consumo y campañas, <strong style="color: #f472b6;">integrado con tu Factura Electrónica DIAN</strong>.
+                    </p>
+                    <!-- Integraciones badge -->
+                    <div class="flex flex-wrap justify-center gap-3 mt-6">
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(236,72,153,0.15); border: 1px solid rgba(236,72,153,0.35);">🔗 Integrado con Facturación DIAN</span>
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.35);">📄 Cotización Electrónica</span>
+                        <span class="text-xs px-3 py-1.5 rounded-full font-bold text-white" style="background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.35);">💬 Campañas WhatsApp & Email</span>
+                    </div>
+                </div>
+
+                <!-- Grid funcionalidades CRM -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
+
+                    <!-- Base de Clientes -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="50"
+                         style="background: linear-gradient(145deg, rgba(236,72,153,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(236,72,153,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(236,72,153,0.55)'; this.style.boxShadow='0 8px 32px rgba(236,72,153,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(236,72,153,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🗂️</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Base de Clientes</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-pink-400">✓</span> Base de datos centralizada</li>
+                            <li class="flex gap-1.5"><span class="text-pink-400">✓</span> Historial de consumo</li>
+                            <li class="flex gap-1.5"><span class="text-pink-400">✓</span> Seguimiento frecuentes</li>
+                            <li class="flex gap-1.5"><span class="text-pink-400">✓</span> Segmentación de clientes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cotización y Factura -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="100"
+                         style="background: linear-gradient(145deg, rgba(139,92,246,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(139,92,246,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(139,92,246,0.55)'; this.style.boxShadow='0 8px 32px rgba(139,92,246,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(139,92,246,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">📄</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Cotización & Factura</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-violet-400">✓</span> Cotizaciones electrónicas</li>
+                            <li class="flex gap-1.5"><span class="text-violet-400">✓</span> Conversión a factura DIAN</li>
+                            <li class="flex gap-1.5"><span class="text-violet-400">✓</span> Historial por cliente</li>
+                            <li class="flex gap-1.5"><span class="text-violet-400">✓</span> Envío por WhatsApp/email</li>
+                        </ul>
+                    </div>
+
+                    <!-- Puntos y Fidelización -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="150"
+                         style="background: linear-gradient(145deg, rgba(99,102,241,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(99,102,241,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(99,102,241,0.55)'; this.style.boxShadow='0 8px 32px rgba(99,102,241,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(99,102,241,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🏆</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Puntos y Fidelización</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-indigo-400">✓</span> Sistema de puntos</li>
+                            <li class="flex gap-1.5"><span class="text-indigo-400">✓</span> Recompensas y descuentos</li>
+                            <li class="flex gap-1.5"><span class="text-indigo-400">✓</span> Ranking de clientes top</li>
+                            <li class="flex gap-1.5"><span class="text-indigo-400">✓</span> Cumpleaños automáticos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Campañas WhatsApp / Email -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="200"
+                         style="background: linear-gradient(145deg, rgba(16,185,129,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(16,185,129,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(16,185,129,0.55)'; this.style.boxShadow='0 8px 32px rgba(16,185,129,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(16,185,129,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">💬</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Campañas Marketing</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-emerald-400">✓</span> Campañas WhatsApp masivas</li>
+                            <li class="flex gap-1.5"><span class="text-emerald-400">✓</span> Email marketing</li>
+                            <li class="flex gap-1.5"><span class="text-emerald-400">✓</span> Notificaciones automáticas</li>
+                            <li class="flex gap-1.5"><span class="text-emerald-400">✓</span> Métricas de campaña</li>
+                        </ul>
+                    </div>
+
+                    <!-- Multiempresa / Sucursales -->
+                    <div class="rounded-2xl p-5 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="250"
+                         style="background: linear-gradient(145deg, rgba(251,191,36,0.08), rgba(10,17,40,0.6)); border: 1px solid rgba(251,191,36,0.2); transition: all 0.35s ease; backdrop-filter: blur(12px);"
+                         onmouseenter="this.style.borderColor='rgba(251,191,36,0.55)'; this.style.boxShadow='0 8px 32px rgba(251,191,36,0.18)'; this.style.transform='translateY(-5px)'"
+                         onmouseleave="this.style.borderColor='rgba(251,191,36,0.2)'; this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🏢</span>
+                            <h4 class="font-bold text-white text-sm leading-tight">Multisede / Reportes</h4>
+                        </div>
+                        <ul class="space-y-1 text-xs text-textMuted">
+                            <li class="flex gap-1.5"><span class="text-yellow-400">✓</span> Manejo de varias sedes</li>
+                            <li class="flex gap-1.5"><span class="text-yellow-400">✓</span> Reportes consolidados</li>
+                            <li class="flex gap-1.5"><span class="text-yellow-400">✓</span> Control independiente</li>
+                            <li class="flex gap-1.5"><span class="text-yellow-400">✓</span> Rentabilidad por sucursal</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Imagen real CRM -->
+                <div class="max-w-4xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-2xl overflow-hidden relative group" style="border: 1px solid rgba(236,72,153,0.25);">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+                        <img src="img/Crm_oprttunidad.jpg" alt="CRM Fidelización - Vista de oportunidades y clientes" class="w-full max-h-72 object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 z-20 p-4">
+                            <p class="text-white font-bold text-sm">🎯 CRM — Panel de Oportunidades</p>
+                            <p class="text-pink-300 text-xs">Gestión de clientes, cotizaciones y seguimiento integrado con factura DIAN</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA CRM -->
+                <div class="max-w-3xl mx-auto rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6" data-aos="fade-up"
+                     style="background: linear-gradient(135deg, rgba(236,72,153,0.12), rgba(139,92,246,0.08)); border: 1px solid rgba(236,72,153,0.3);">
+                    <div>
+                        <p class="text-white font-bold text-lg mb-1">🎯 CRM Fidelización</p>
+                        <p class="text-textMuted text-sm">Módulo independiente — se activa sin depender de GastroBar</p>
+                    </div>
+                    <a href="https://wa.me/573155155512?text=Hola%2C%20me%20interesa%20el%20m%C3%B3dulo%20CRM%20Fidelizaci%C3%B3n%20integrado%20con%20facturaci%C3%B3n%20electr%C3%B3nica" target="_blank"
+                       class="flex-shrink-0 inline-flex items-center gap-2 text-white font-bold py-3 px-8 rounded-full text-sm transition-all hover:-translate-y-1 hover:scale-105"
+                       style="background: linear-gradient(135deg, #ec4899, #8b5cf6); box-shadow: 0 0 24px rgba(236,72,153,0.4);">
+                        <span class="material-symbols-outlined text-base">loyalty</span>
+                        Cotizar CRM
+                    </a>
+                </div>
+
+            </div><!-- /fin MÓDULO B -->
+
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="border-t border-white/5 pt-12 pb-8 bg-surface">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -729,38 +1307,6 @@
             easing: 'ease-out-cubic',
         });
 
-        // Plan Toggle Logic
-        const planToggle = document.getElementById('plan-toggle');
-        const toggleCircle = document.getElementById('toggle-circle');
-        const containerModulos = document.getElementById('container-modulos');
-        const containerPaquetes = document.getElementById('container-paquetes');
-        const labelModulos = document.getElementById('label-modulos');
-        const labelPaquetes = document.getElementById('label-paquetes');
-
-        let isPaquetes = false;
-
-        planToggle.addEventListener('click', () => {
-            isPaquetes = !isPaquetes;
-            
-            if (isPaquetes) {
-                toggleCircle.style.transform = 'translateX(32px)';
-                containerModulos.classList.add('hidden');
-                containerPaquetes.classList.remove('hidden');
-                labelPaquetes.classList.remove('text-textMuted');
-                labelPaquetes.classList.add('text-white');
-                labelModulos.classList.remove('text-white');
-                labelModulos.classList.add('text-textMuted');
-            } else {
-                toggleCircle.style.transform = 'translateX(0)';
-                containerModulos.classList.remove('hidden');
-                containerPaquetes.classList.add('hidden');
-                labelModulos.classList.remove('text-textMuted');
-                labelModulos.classList.add('text-white');
-                labelPaquetes.classList.remove('text-white');
-                labelPaquetes.classList.add('text-textMuted');
-            }
-        });
-        
         // Navbar Scrolled Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {

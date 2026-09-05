@@ -14,59 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (Estilos Compilados Offline) -->
+    <link rel="stylesheet" href="css/styles.css">
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Tailwind Config for Branding -->
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#D81B60",
-                        primaryHover: "#E91E63",
-                        primaryGlow: "rgba(216, 27, 96, 0.5)",
-                        secondary: "#000B18",
-                        surface: "#0A1128",
-                        surfaceLight: "rgba(255, 255, 255, 0.03)",
-                        textMain: "#F8FAFC",
-                        textMuted: "#94A3B8"
-                    },
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'blob': 'blob 7s infinite',
-                        'glow': 'glow 3s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        glow: {
-                            '0%': { boxShadow: '0 0 15px rgba(216, 27, 96, 0.2)' },
-                            '100%': { boxShadow: '0 0 30px rgba(216, 27, 96, 0.6)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
+        img {
+            max-width: 100%;
+        }
+        nav img {
+            max-height: 40px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
         body {
             background-color: #030712;
             color: #F8FAFC;
@@ -147,7 +110,7 @@
     <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300 py-4" id="navbar">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-10 w-auto object-contain rounded-lg">
+                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-10 w-auto object-contain rounded-lg" style="max-height: 40px; max-width: 200px; height: 40px; width: auto; object-fit: contain;">
                 <span class="text-2xl font-bold tracking-tight sr-only">FacturaNex</span>
             </div>
             
@@ -170,9 +133,9 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <div class="inline-flex items-center gap-3 px-1 py-1 pr-4 rounded-full glass border-primary/30 text-primary mb-6 animate-glow">
-                        <img src="img/dian_icon.png" alt="DIAN Icon" class="h-8 w-auto rounded-full bg-white/10">
-                        <span class="text-xs font-bold tracking-wide uppercase">Conexión Directa con la DIAN</span>
+                    <div class="inline-flex items-center gap-3 px-3 py-1.5 rounded-full glass border-primary/40 text-primary mb-6 animate-glow shadow-[0_0_20px_rgba(216,27,96,0.2)]">
+                        <img src="img/dian_icon.png" alt="DIAN Icon" class="h-7 w-auto rounded-full bg-white/10" style="max-height: 28px; width: auto;">
+                        <span class="text-xs font-black tracking-wider uppercase text-white">Modo de Operación: <span class="text-primary font-black">Software Propio — Conexión Directa DIAN</span></span>
                     </div>
                     
                     <h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] mb-6">
@@ -181,7 +144,7 @@
                     </h1>
                     
                     <p class="text-lg text-textMuted mb-10 max-w-xl leading-relaxed">
-                        Plataforma <strong class="text-white">todo-en-uno</strong> diseñada para administrar tu negocio, agilizar tus ventas y cumplir con todas las normativas de la DIAN en tiempo récord. No más procesos complejos.
+                        Plataforma <strong class="text-white">todo-en-uno</strong> en <strong class="text-primary">Modo Software Propio</strong>, diseñada para administrar tu negocio, agilizar tus ventas y conectar directamente con la DIAN en tiempo récord.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -227,7 +190,11 @@
 
     <!-- Beneficios (Marquee / Stats) -->
     <section id="beneficios" class="py-10 border-y border-white/5 bg-black/20">
-        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 lg:gap-24 opacity-70">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-8 lg:gap-16 opacity-90">
+            <div class="flex items-center gap-3 font-bold text-white" data-aos="fade-up" data-aos-delay="50">
+                <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+                Software Propio DIAN
+            </div>
             <div class="flex items-center gap-3 font-semibold" data-aos="fade-up" data-aos-delay="100">
                 <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
                 Habilitación Express
@@ -1265,21 +1232,42 @@
     </section>
     <!-- Footer -->
     <footer class="border-t border-white/5 pt-12 pb-8 bg-surface">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <div class="flex items-center gap-4">
-                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-12 w-auto object-contain rounded hover:scale-105 transition duration-500">
+                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-12 w-auto object-contain rounded hover:scale-105 transition duration-500" style="max-height: 48px; max-width: 220px; height: 48px; width: auto; object-fit: contain;">
                 <div class="text-left">
                     <p class="text-white font-bold tracking-widest text-sm">FacturaNex SAS</p>
                     <p class="text-textMuted text-xs mt-1">Conexión Directa con la DIAN.</p>
+                    <p class="text-textMuted text-[11px] mt-0.5 opacity-75">NIT: 902.049.529-8</p>
                 </div>
             </div>
             
-            <div class="text-center md:text-right">
-                <p class="text-textMuted text-sm font-semibold flex items-center justify-center md:justify-end gap-2 mb-2">
+            <div class="text-left space-y-2">
+                <p class="text-white font-bold text-xs uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-base">gavel</span> 
+                    Legal y Cumplimiento
+                </p>
+                <ul class="space-y-2 text-xs text-textMuted">
+                    <li><a href="politica-de-privacidad.html" class="hover:text-primary transition flex items-center gap-1.5"><span class="text-primary font-bold">›</span> Política de Tratamiento de Datos</a></li>
+                    <li><a href="terminos-y-condiciones.html" class="hover:text-primary transition flex items-center gap-1.5"><span class="text-primary font-bold">›</span> Términos y Condiciones del Servicio</a></li>
+                    <li><a href="habeas-data.html" class="hover:text-primary transition flex items-center gap-1.5"><span class="text-primary font-bold">›</span> Procedimiento Habeas Data</a></li>
+                    <li class="pt-1 flex flex-wrap gap-2 text-[11px]">
+                        <a href="politica_de_privacidad_facturanex.pdf" download class="text-primary hover:underline font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-xs">download</span> PDF Privacidad</a>
+                        <a href="terminos_y_condiciones_facturanex.pdf" download class="text-primary hover:underline font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-xs">download</span> PDF Términos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-left md:text-right space-y-2">
+                <p class="text-white font-bold text-xs uppercase tracking-wider mb-3 flex items-center justify-start md:justify-end gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-base">headset_mic</span>
+                    Contacto Directo
+                </p>
+                <p class="text-textMuted text-sm font-semibold flex items-center justify-start md:justify-end gap-2">
                     <span class="material-symbols-outlined text-primary text-sm">call</span> 
                     Línea: <a href="https://wa.me/573155155512" class="text-white hover:text-primary transition">315 515 55 12</a>
                 </p>
-                <p class="text-textMuted text-sm font-semibold flex items-center justify-center md:justify-end gap-2 mb-2">
+                <p class="text-textMuted text-sm font-semibold flex items-center justify-start md:justify-end gap-2">
                     <span class="material-symbols-outlined text-primary text-sm">mail</span> 
                     <a href="mailto:contacto@facturanex.com" class="text-white hover:text-primary transition">contacto@facturanex.com</a>
                 </p>
@@ -1289,7 +1277,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-white/5 text-center text-xs text-textMuted opacity-60">
-            © 2025 FacturaNex SAS. Impulsando y digitalizando el crecimiento de las empresas en Colombia.
+            © 2026 FacturaNex SAS. Impulsando y digitalizando el crecimiento de las empresas en Colombia.
         </div>
     </footer>
 
@@ -1323,6 +1311,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 

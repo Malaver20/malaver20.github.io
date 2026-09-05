@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimiento de Habeas Data | FacturaNex SAS</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Procedimiento de Habeas Data de FacturaNex SAS. Transparencia, legalidad y protección de datos.">
+    <meta name="keywords" content="FacturaNex, DIAN, Habeas Data, Legal, Colombia, Términos, Privacidad">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+    <!-- Tailwind CSS (Estilos Compilados Offline) -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        img {
+            max-width: 100%;
+        }
+        nav img {
+            max-height: 40px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+        body {
+            background-color: #030712;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(10, 17, 40, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.2) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #E91E63, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(216, 27, 96, 0.3);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(216, 27, 96, 0.6);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white relative">
+
+    <!-- Fondo decorativo -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-40"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-10 w-auto object-contain rounded-lg" style="max-height: 40px; max-width: 200px; height: 40px; width: auto; object-fit: contain;">
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-sm font-medium text-textMuted hover:text-white transition flex items-center gap-1">
+                    <span class="material-symbols-outlined text-base">arrow_back</span>
+                    <span>Volver al Inicio</span>
+                </a>
+                <a href="habeas_data_facturanex.pdf" download class="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-primaryHover text-white text-xs font-bold py-2.5 px-4 rounded-xl shadow-lg transition">
+                    <span class="material-symbols-outlined text-sm">download</span>
+                    <span>Descargar PDF</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Principal -->
+    <section class="pt-32 pb-12 relative border-b border-white/5 bg-surface/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                    <span class="material-symbols-outlined text-sm">gavel</span>
+                    <span>Documento Oficial</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                    Procedimiento de Habeas Data
+                </h1>
+                <p class="text-textMuted text-sm md:text-base leading-relaxed mb-6">
+                    FacturaNex SAS — NIT 902.049.529-8 | Última actualización: 5 de septiembre de 2026
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="habeas_data_facturanex.pdf" download class="inline-flex items-center gap-2 bg-primary hover:bg-primaryHover text-white text-sm font-bold py-3 px-6 rounded-xl shadow-lg transition">
+                        <span class="material-symbols-outlined text-base">picture_as_pdf</span>
+                        <span>Descargar Versión PDF</span>
+                    </a>
+                    <a href="https://wa.me/573155155512?text=Hola,%20tengo%20una%20consulta%20legal%20o%20de%20privacidad" target="_blank" class="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white text-sm font-bold py-3 px-6 rounded-xl border border-white/10 transition">
+                        <span class="material-symbols-outlined text-base">chat</span>
+                        <span>Consultar por WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal con Sidebar -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-12 gap-10">
+
+            <!-- Sidebar con Índice (Desktop) -->
+            <aside class="lg:col-span-4 hidden lg:block">
+                <div class="sticky top-28 glass p-6 rounded-2xl max-h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar">
+                    <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">toc</span>
+                        Índice de Contenido
+                    </h3>
+                    <nav class="space-y-1 text-xs">
+                        <a href="#section-1" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">HABEAS DATA</a>
+<a href="#section-1-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">1. ¿Qué es el Habeas Data?</a>
+<a href="#section-2-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">2. ¿Quién es el responsable?</a>
+<a href="#section-3-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">3. Derechos de los titulares</a>
+<a href="#section-4-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">4. ¿Cómo ejercer estos derechos?</a>
+<a href="#section-5-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">5. Información que debe contener la solicitud</a>
+<a href="#section-6-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">6. Consultas</a>
+<a href="#section-7-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">7. Reclamos</a>
+<a href="#section-8-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">8. Reclamos incompletos</a>
+<a href="#section-9-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">9. Verificación de identidad</a>
+<a href="#section-10-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">10. ¿Cuándo puede negarse una solicitud de supresión?</a>
+<a href="#section-11-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">11. Revocatoria de la autorización</a>
+<a href="#section-12-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">12. Comunicaciones comerciales</a>
+<a href="#section-13-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">13. Datos incorporados por clientes de FacturaNex</a>
+<a href="#section-14-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">14. ¿Qué hacer si no estoy de acuerdo con la respues...</a>
+<a href="#section-15-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">15. Gratuidad</a>
+<a href="#section-16-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">16. Seguridad de la información</a>
+<a href="#section-17" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">HTTPS/TLS.</a>
+<a href="#section-17-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">17. Contacto del Responsable</a>
+<a href="#section-18-" class="block py-1.5 px-3 rounded-lg text-textMuted hover:text-white hover:bg-white/5 transition border-l-2 border-transparent hover:border-primary truncate">18. Vigencia</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Cuerpo del Documento -->
+            <main class="lg:col-span-8 space-y-8">
+                
+        <div id="formulario-habeas" class="glass-card p-8 rounded-2xl border border-primary/30 shadow-[0_0_30px_rgba(216,27,96,0.1)] scroll-mt-28" data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="h-10 w-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+                    <span class="material-symbols-outlined">edit_document</span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Solicitud Digital de Habeas Data</h3>
+                    <p class="text-xs text-textMuted">Ejerce tus derechos de Consulta, Actualización o Supresión de Datos Personales</p>
+                </div>
+            </div>
+            
+            <form onsubmit="handleHabeasSubmit(event)" class="space-y-4 text-xs">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-white font-bold mb-1">Nombre Completo o Razón Social *</label>
+                        <input type="text" id="hd_nombre" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none" placeholder="Ej: Maria Perez">
+                    </div>
+                    <div>
+                        <label class="block text-white font-bold mb-1">Cédula / NIT *</label>
+                        <input type="text" id="hd_identificacion" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none" placeholder="Ej: 1.098.765.432">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-white font-bold mb-1">Correo Electrónico *</label>
+                        <input type="email" id="hd_email" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none" placeholder="contacto@empresa.com">
+                    </div>
+                    <div>
+                        <label class="block text-white font-bold mb-1">Teléfono de Contacto *</label>
+                        <input type="tel" id="hd_telefono" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none" placeholder="300 123 4567">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-white font-bold mb-1">Tipo de Solicitud *</label>
+                    <select id="hd_tipo" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none">
+                        <option value="Consulta de Datos">Consulta de Información Almacenada</option>
+                        <option value="Actualización / Rectificación">Actualización o Rectificación de Datos</option>
+                        <option value="Supresión / Eliminación">Supresión / Eliminación de Datos (Cancelación)</option>
+                        <option value="Revocatoria de Autorización">Revocatoria de Autorización</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-white font-bold mb-1">Descripción de la Solicitud *</label>
+                    <textarea id="hd_mensaje" rows="4" required class="w-full bg-surface border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none" placeholder="Describe claramente el motivo de tu solicitud..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-primary hover:bg-primaryHover text-white font-bold rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-base">send</span>
+                    <span>Enviar Solicitud a FacturaNex</span>
+                </button>
+            </form>
+
+            <script>
+                function handleHabeasSubmit(e) {
+                    e.preventDefault();
+                    const nombre = document.getElementById('hd_nombre').value;
+                    const id = document.getElementById('hd_identificacion').value;
+                    const email = document.getElementById('hd_email').value;
+                    const tipo = document.getElementById('hd_tipo').value;
+                    const msg = document.getElementById('hd_mensaje').value;
+
+                    const text = `Solicitud de Habeas Data FacturaNex%0A- Nombre: ${nombre}%0A- ID/NIT: ${id}%0A- Correo: ${email}%0A- Tipo: ${tipo}%0A- Detalle: ${msg}`;
+                    window.open(`https://wa.me/573155155512?text=${text}`, '_blank');
+                }
+            </script>
+        </div>
+        
+<div id="section-1" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> HABEAS DATA</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Procedimiento para el ejercicio de derechos sobre datos personales</p>
+    <p>FACTURANEX SAS</p>
+    <p>Última actualización: 5 de septiembre de 2026</p>
+  </div>
+</div>
+
+<div id="section-1-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 1. ¿Qué es el Habeas Data?</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>El Habeas Data es el derecho que tienen las personas a conocer, actualizar y rectificar la información personal que haya sido recolectada sobre ellas, así como a ejercer los demás derechos reconocidos por la legislación colombiana en materia de protección de datos personales.</p>
+    <p>En Colombia, la protección de datos personales tiene fundamento, entre otras disposiciones, en el artículo 15 de la Constitución Política y en la Ley 1581 de 2012, junto con sus normas reglamentarias y demás disposiciones aplicables.</p>
+    <p>FACTURANEX SAS garantiza a los titulares los mecanismos necesarios para ejercer sus derechos respecto del tratamiento de sus datos personales.</p>
+  </div>
+</div>
+
+<div id="section-2-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 2. ¿Quién es el responsable?</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>El responsable respecto de los tratamientos en los que FACTURANEX SAS determine las finalidades y medios es:</p>
+    <p>Razón social: FACTURANEX SAS
+NIT: 902.049.529-8
+Domicilio: Bogotá D.C., Colombia
+Dirección: CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA
+Correo: contacto@facturanex.com
+Teléfono: +57 315 515 5512
+Sitio web: https://facturanex.com</p>
+    <p>Cuando FACTURANEX SAS actúe como Encargado del Tratamiento respecto de información incorporada por un cliente, las solicitudes relacionadas con dichos datos podrán estar sujetas al rol y a las instrucciones del cliente que actúe como Responsable.</p>
+  </div>
+</div>
+
+<div id="section-3-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 3. Derechos de los titulares</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Cuando FACTURANEX SAS sea responsable del tratamiento de los datos, el titular podrá ejercer los derechos reconocidos por la Ley 1581 de 2012, entre ellos:</p>
+    <p>Conocer</p>
+    <p>Solicitar información sobre los datos personales que son objeto de tratamiento.</p>
+    <p>Actualizar</p>
+    <p>Solicitar la actualización de información que se encuentre desactualizada.</p>
+    <p>Rectificar</p>
+    <p>Solicitar la corrección de información que sea incorrecta, incompleta o inexacta.</p>
+    <p>Solicitar la supresión</p>
+    <p>Solicitar la eliminación de sus datos personales cuando el tratamiento no se encuentre amparado por una base legal o cuando resulte procedente de acuerdo con la normativa aplicable.</p>
+    <p>Revocar la autorización</p>
+    <p>Solicitar la revocatoria de la autorización para determinadas finalidades cuando esta sea la base jurídica del tratamiento y la revocatoria resulte procedente.</p>
+    <p>La revocatoria podrá ser total o parcial, dependiendo de las finalidades respecto de las cuales el titular solicite dejar de autorizar el tratamiento.</p>
+    <p>Solicitar prueba de la autorización</p>
+    <p>Solicitar información que permita acreditar la autorización otorgada para el tratamiento, cuando esta sea exigible.</p>
+    <p>Ser informado</p>
+    <p>Solicitar información sobre el uso que se ha dado a sus datos personales.</p>
+    <p>Presentar quejas</p>
+    <p>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC) cuando considere que se han vulnerado sus derechos, una vez agotado el trámite correspondiente ante el Responsable o Encargado, según aplique.</p>
+  </div>
+</div>
+
+<div id="section-4-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 4. ¿Cómo ejercer estos derechos?</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>El titular podrá presentar su solicitud a FACTURANEX SAS a través de los siguientes canales:</p>
+    <p>Correo electrónico</p>
+    <p>contacto@facturanex.com</p>
+    <p>En el asunto se recomienda indicar:</p>
+    <p>"Solicitud Habeas Data – [tipo de solicitud]"</p>
+    <p>Por ejemplo:</p>
+    <p>Solicitud Habeas Data – Actualización de datos</p>
+    <p>Teléfono</p>
+    <p>+57 315 515 5512</p>
+    <p>Dirección física</p>
+    <p>CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA, Bogotá D.C., Colombia</p>
+  </div>
+</div>
+
+<div id="section-5-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 5. Información que debe contener la solicitud</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Para facilitar la atención de la solicitud, el titular deberá proporcionar información suficiente para identificarlo y determinar el alcance de su petición.</p>
+    <p>La solicitud podrá incluir:</p>
+    <p>Nombre completo.</p>
+    <p>Tipo y número de identificación.</p>
+    <p>Correo electrónico.</p>
+    <p>Número telefónico.</p>
+    <p>Derecho que desea ejercer.</p>
+    <p>Descripción clara de la solicitud.</p>
+    <p>Información relacionada con los datos objeto de la petición.</p>
+    <p>Documentos que soporten la solicitud, cuando sean necesarios.</p>
+    <p>Cuando la solicitud sea presentada por un representante, apoderado o causahabiente, deberá acreditarse la calidad correspondiente.</p>
+    <p>FACTURANEX SAS podrá solicitar información adicional cuando sea razonablemente necesaria para verificar la identidad del solicitante o atender adecuadamente la petición.</p>
+  </div>
+</div>
+
+<div id="section-6-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 6. Consultas</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Las solicitudes mediante las cuales el titular pretenda conocer la información personal que FACTURANEX SAS tiene sobre él serán atendidas dentro de los términos establecidos por la legislación aplicable.</p>
+    <p>Actualmente, las consultas deberán atenderse dentro de los diez (10) días hábiles siguientes a la fecha de recepción.</p>
+    <p>Cuando excepcionalmente no sea posible atender la consulta dentro de dicho término, se informará al interesado la razón de la demora y la fecha en que será atendida, dentro del término adicional permitido legalmente.</p>
+  </div>
+</div>
+
+<div id="section-7-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 7. Reclamos</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>El titular podrá presentar reclamos cuando considere que sus datos deben ser:</p>
+    <p>Actualizados.</p>
+    <p>Rectificados.</p>
+    <p>Suprimidos.</p>
+    <p>Tratados de manera adecuada.</p>
+    <p>Cuando considere que se ha presentado un tratamiento contrario a la legislación aplicable.</p>
+    <p>Los reclamos serán atendidos dentro del término legal aplicable, actualmente de quince (15) días hábiles contados a partir del día siguiente a su recepción.</p>
+    <p>Cuando excepcionalmente no sea posible atender el reclamo dentro de dicho término, FACTURANEX SAS informará al interesado las razones de la demora y la fecha en que será atendido, de acuerdo con el término adicional permitido legalmente.</p>
+  </div>
+</div>
+
+<div id="section-8-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 8. Reclamos incompletos</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Cuando el reclamo presentado se encuentre incompleto, FACTURANEX SAS podrá requerir al titular para que subsane las deficiencias identificadas.</p>
+    <p>El requerimiento se realizará dentro del término establecido por la normativa aplicable.</p>
+    <p>Si transcurre el término legal correspondiente sin que el solicitante subsane la información requerida, podrá entenderse que ha desistido del reclamo, de conformidad con la legislación aplicable.</p>
+  </div>
+</div>
+
+<div id="section-9-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 9. Verificación de identidad</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Con el propósito de proteger la información personal y prevenir accesos no autorizados, FACTURANEX SAS podrá implementar mecanismos razonables para verificar la identidad del solicitante.</p>
+    <p>La información solicitada para dicha verificación será utilizada únicamente en la medida necesaria para validar la legitimidad de la solicitud y proteger los datos personales.</p>
+  </div>
+</div>
+
+<div id="section-10-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 10. ¿Cuándo puede negarse una solicitud de supresión?</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>La solicitud de supresión de datos personales no necesariamente procederá en todos los casos.</p>
+    <p>Podrá existir una obligación o fundamento legítimo para conservar determinada información, por ejemplo cuando:</p>
+    <p>Exista una obligación legal de conservación.</p>
+    <p>Exista una obligación tributaria o contable.</p>
+    <p>La información sea necesaria para atender obligaciones contractuales.</p>
+    <p>Exista un requerimiento de una autoridad competente.</p>
+    <p>Su conservación sea necesaria para el ejercicio o defensa de derechos.</p>
+    <p>Existan otras circunstancias previstas por la legislación.</p>
+    <p>En particular, la normativa tributaria establece obligaciones de conservación de determinados documentos e informaciones. El artículo 632 del Estatuto Tributario contempla, como regla general, períodos mínimos de conservación de cinco años para determinadas informaciones y pruebas, y la DIAN ha señalado la obligación de conservación de facturas electrónicas en los términos correspondientes.</p>
+    <p>Por esta razón, una solicitud de supresión no implica necesariamente la eliminación inmediata de toda la información relacionada con el titular.</p>
+  </div>
+</div>
+
+<div id="section-11-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 11. Revocatoria de la autorización</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Cuando el tratamiento de los datos esté basado en la autorización del titular, este podrá solicitar su revocatoria cuando resulte jurídicamente procedente.</p>
+    <p>La revocatoria podrá ser:</p>
+    <p>Parcial</p>
+    <p>Cuando el titular solicita que sus datos dejen de utilizarse para determinadas finalidades.</p>
+    <p>Por ejemplo:</p>
+    <p>"No deseo recibir comunicaciones comerciales."</p>
+    <p>Esto no necesariamente implica que FACTURANEX SAS deba eliminar información que deba conservar por razones contractuales, legales, tributarias o de seguridad.</p>
+    <p>Total</p>
+    <p>Cuando el titular solicita revocar la autorización respecto de todas las finalidades para las cuales esta haya sido otorgada, siempre que legalmente proceda.</p>
+  </div>
+</div>
+
+<div id="section-12-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 12. Comunicaciones comerciales</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Cuando el titular haya autorizado el envío de comunicaciones comerciales, podrá solicitar en cualquier momento que estas dejen de enviarse.</p>
+    <p>La cancelación de comunicaciones comerciales no necesariamente implica la eliminación de la cuenta o de la información necesaria para prestar el servicio contratado o cumplir obligaciones legales.</p>
+  </div>
+</div>
+
+<div id="section-13-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 13. Datos incorporados por clientes de FacturaNex</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>FacturaNex permite que sus clientes incorporen información de:</p>
+    <p>Clientes.</p>
+    <p>Proveedores.</p>
+    <p>Empleados.</p>
+    <p>Usuarios.</p>
+    <p>Otros terceros.</p>
+    <p>Cuando FACTURANEX SAS actúe como Encargado del Tratamiento, la atención de determinadas solicitudes podrá corresponder al cliente que actúa como Responsable.</p>
+    <p>Por ejemplo, si una empresa utiliza FacturaNex para administrar la información personal de sus empleados, dicha empresa puede ser la responsable de determinar las finalidades del tratamiento.</p>
+    <p>En estos casos, FACTURANEX SAS colaborará con el Responsable dentro del alcance de sus obligaciones como Encargado y de acuerdo con las instrucciones recibidas.</p>
+  </div>
+</div>
+
+<div id="section-14-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 14. ¿Qué hacer si no estoy de acuerdo con la respuesta?</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Si el titular considera que FACTURANEX SAS no atendió adecuadamente su consulta o reclamo, podrá acudir ante la Superintendencia de Industria y Comercio (SIC).</p>
+    <p>De acuerdo con las reglas aplicables al régimen de protección de datos personales, el titular debe haber agotado previamente el trámite de consulta o reclamo ante el Responsable o Encargado correspondiente.</p>
+    <p>La SIC dispone de canales electrónicos para la presentación de solicitudes y trámites relacionados con protección de datos personales.</p>
+    <p>Superintendencia de Industria y Comercio (SIC)</p>
+  </div>
+</div>
+
+<div id="section-15-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 15. Gratuidad</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>El ejercicio de los derechos de consulta, actualización, rectificación, supresión y demás derechos reconocidos por la legislación de protección de datos personales será gratuito, dentro de las condiciones y límites establecidos por la normativa aplicable.</p>
+  </div>
+</div>
+
+<div id="section-16-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 16. Seguridad de la información</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>FACTURANEX SAS implementará medidas técnicas, administrativas y humanas razonables destinadas a proteger los datos personales frente a accesos no autorizados, pérdida, alteración, divulgación o tratamiento indebido.</p>
+    <p>Estas medidas podrán incluir:</p>
+    <p>Controles de acceso.</p>
+    <p>Gestión de usuarios.</p>
+    <p>Autenticación.</p>
+  </div>
+</div>
+
+<div id="section-17" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> HTTPS/TLS.</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>Copias de seguridad.</p>
+    <p>Registros de actividad.</p>
+    <p>Monitoreo.</p>
+    <p>Procedimientos de gestión de incidentes.</p>
+    <p>Compromisos de confidencialidad.</p>
+  </div>
+</div>
+
+<div id="section-17-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 17. Contacto del Responsable</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>FACTURANEX SAS
+NIT: 902.049.529-8
+Dirección: CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA, Bogotá D.C., Colombia
+Correo: contacto@facturanex.com
+Teléfono: +57 315 515 5512
+Sitio web: https://facturanex.com</p>
+    <p>Asunto recomendado:
+Solicitud Habeas Data</p>
+  </div>
+</div>
+
+<div id="section-18-" class="glass-card p-6 md:p-8 rounded-2xl border border-white/5 scroll-mt-28" data-aos="fade-up">
+  <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/5 pb-3"><span class="w-2 h-2 bg-primary rounded-full"></span> 18. Vigencia</h2>
+  <div class="space-y-3 text-sm text-textMuted leading-relaxed">
+    <p>La presente Política de Habeas Data entra en vigencia a partir del:</p>
+    <p>5 de septiembre de 2026</p>
+    <p>Última actualización: 5 de septiembre de 2026.</p>
+  </div>
+</div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 pt-12 pb-8 bg-surface mt-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <img src="img/logo_facturanex_v3.png" alt="FacturaNex Logo" class="h-10 w-auto object-contain rounded" style="max-height: 40px; max-width: 180px; height: 40px; width: auto; object-fit: contain;">
+                <div class="text-left">
+                    <p class="text-white font-bold tracking-widest text-sm">FacturaNex SAS</p>
+                    <p class="text-textMuted text-xs mt-1">Conexión Directa con la DIAN — NIT 902.049.529-8</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-xs text-textMuted">
+                <a href="politica-de-privacidad.html" class="hover:text-primary transition">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html" class="hover:text-primary transition">Términos y Condiciones</a>
+                <a href="habeas-data.html" class="hover:text-primary transition">Habeas Data</a>
+                <a href="index.html" class="hover:text-white transition">Inicio</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-white/5 text-center text-xs text-textMuted opacity-60">
+            © 2026 FacturaNex SAS. Impulsando y digitalizando el crecimiento de las empresas en Colombia.
+        </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 600 });
+    </script>
+</body>
+</html>

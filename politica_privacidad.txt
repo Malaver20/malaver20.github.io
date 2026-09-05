@@ -1,0 +1,577 @@
+POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES
+
+FACTURANEX SAS
+
+Última actualización: 5 de septiembre de 2026
+
+1. Objeto y alcance
+
+La presente Política de Tratamiento de Datos Personales establece los principios, criterios y procedimientos bajo los cuales FACTURANEX SAS, identificada con NIT 902.049.529-8, realiza el tratamiento de datos personales en desarrollo de sus actividades comerciales, administrativas, contractuales y tecnológicas.
+
+Esta Política aplica a los datos personales recolectados, almacenados, utilizados, consultados, transmitidos, transferidos, actualizados o suprimidos por FACTURANEX SAS a través de sus diferentes canales, incluyendo:
+
+Sitio web de FacturaNex.
+
+Plataforma tecnológica.
+
+Formularios físicos y digitales.
+
+Procesos comerciales.
+
+Procesos de contratación.
+
+Canales de atención y soporte.
+
+Comunicaciones electrónicas.
+
+Demás medios utilizados para la prestación de sus servicios.
+
+El tratamiento de los datos personales se realizará de conformidad con la Ley 1581 de 2012, el Decreto 1377 de 2013, compilado en el Decreto 1074 de 2015, y las demás normas que las modifiquen, adicionen o sustituyan.
+
+2. Responsable del Tratamiento
+
+Para efectos de la presente Política, el Responsable del Tratamiento es:
+
+Razón social: FACTURANEX SAS
+NIT: 902.049.529-8
+Domicilio: Bogotá D.C., Colombia
+Dirección: CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA
+Correo electrónico: contacto@facturanex.com
+Teléfono: +57 315 515 5512
+Sitio web: https://facturanex.com
+
+Dependiendo de la naturaleza de la información y del servicio contratado, FACTURANEX SAS podrá actuar como Responsable del Tratamiento o como Encargado del Tratamiento, de acuerdo con las definiciones establecidas en la legislación colombiana.
+
+3. Definiciones
+
+Para efectos de esta Política se adoptan, entre otras, las siguientes definiciones:
+
+Autorización
+
+Consentimiento previo, expreso e informado del titular para realizar el tratamiento de sus datos personales, cuando dicha autorización sea exigible conforme a la legislación aplicable.
+
+Base de Datos
+
+Conjunto organizado de datos personales que sea objeto de tratamiento.
+
+Dato Personal
+
+Cualquier información vinculada o que pueda asociarse a una persona natural determinada o determinable.
+
+Dato Sensible
+
+Información que afecta la intimidad del titular o cuyo uso indebido puede generar discriminación, conforme a la legislación aplicable.
+
+Encargado del Tratamiento
+
+Persona natural o jurídica, pública o privada, que realiza el tratamiento de datos personales por cuenta del Responsable.
+
+Responsable del Tratamiento
+
+Persona natural o jurídica que decide sobre la base de datos y/o el tratamiento de los datos.
+
+Para efectos de esta Política, FACTURANEX SAS podrá tener esta calidad respecto de determinadas bases de datos.
+
+Titular
+
+Persona natural cuyos datos personales son objeto de tratamiento.
+
+Tratamiento
+
+Cualquier operación o conjunto de operaciones realizadas sobre datos personales, tales como recolección, almacenamiento, uso, circulación, consulta, actualización, transmisión, transferencia o supresión.
+
+4. Principios aplicables
+
+FACTURANEX SAS realizará el tratamiento de datos personales observando los siguientes principios:
+
+Legalidad
+
+El tratamiento se realizará de conformidad con las disposiciones legales aplicables.
+
+Finalidad
+
+Los datos serán tratados para finalidades legítimas, específicas y previamente informadas al titular cuando corresponda.
+
+Libertad
+
+El tratamiento se realizará con el consentimiento previo, expreso e informado del titular cuando este sea necesario, salvo las excepciones establecidas legalmente.
+
+Veracidad o calidad
+
+La información será tratada procurando que sea veraz, completa, exacta, actualizada, comprobable y comprensible.
+
+Transparencia
+
+Se garantizará al titular el derecho a obtener información sobre los datos que sean objeto de tratamiento.
+
+Acceso y circulación restringida
+
+El tratamiento estará sujeto a los límites establecidos por la legislación y los datos no serán divulgados a terceros no autorizados.
+
+Seguridad
+
+Se implementarán medidas técnicas, administrativas y humanas razonables para proteger los datos personales.
+
+Confidencialidad
+
+Las personas que intervengan en el tratamiento estarán obligadas a mantener la confidencialidad de la información, incluso después de finalizar su relación con FACTURANEX SAS cuando corresponda.
+
+5. Bases de datos y finalidades
+
+FACTURANEX SAS podrá administrar diferentes categorías de bases de datos de acuerdo con sus actividades.
+
+5.1. Base de datos de clientes y usuarios
+
+Titulares
+
+Personas naturales que contratan los servicios y representantes, administradores, empleados o usuarios autorizados de empresas clientes.
+
+Datos
+
+Podrán incluir:
+
+Nombre.
+
+Documento de identificación.
+
+Correo electrónico.
+
+Teléfono.
+
+Cargo.
+
+Información empresarial.
+
+Información contractual.
+
+Información relacionada con la cuenta.
+
+Registros de acceso y utilización del servicio.
+
+Finalidades
+
+Crear y administrar cuentas.
+
+Prestar los servicios contratados.
+
+Gestionar contratos.
+
+Procesar pagos.
+
+Emitir documentos comerciales.
+
+Brindar soporte.
+
+Enviar comunicaciones operativas.
+
+Gestionar renovaciones.
+
+Cumplir obligaciones legales y contractuales.
+
+5.2. Base de datos operativa de clientes y terceros
+
+FacturaNex permite a sus clientes incorporar información relacionada con sus propios clientes, proveedores, empleados y demás terceros.
+
+En estos casos, dependiendo de la naturaleza del servicio:
+
+el cliente de FACTURANEX SAS podrá actuar como Responsable del Tratamiento y FACTURANEX SAS podrá actuar como Encargado del Tratamiento.
+
+La información podrá utilizarse para permitir al cliente operar funcionalidades como:
+
+Facturación electrónica.
+
+Nómina electrónica.
+
+Documento soporte.
+
+POS.
+
+Gestión de clientes.
+
+CRM.
+
+Inventarios.
+
+Contabilidad.
+
+Gestión de proveedores.
+
+Gestión de restaurantes.
+
+Otros módulos contratados.
+
+FACTURANEX SAS tratará esta información de acuerdo con las instrucciones legítimas del cliente y para la prestación de los servicios contratados.
+
+5.3. Base de datos de prospectos comerciales
+
+Titulares
+
+Personas que solicitan información, cotizaciones, demostraciones o manifiestan interés en los servicios de FacturaNex.
+
+Datos
+
+Podrán incluir:
+
+Nombre.
+
+Teléfono.
+
+Correo electrónico.
+
+Empresa.
+
+Cargo.
+
+Información suministrada voluntariamente por el interesado.
+
+Finalidades
+
+Atender solicitudes.
+
+Realizar demostraciones.
+
+Elaborar propuestas.
+
+Realizar seguimiento comercial.
+
+Informar sobre los servicios solicitados.
+
+Enviar comunicaciones comerciales cuando exista autorización o una base legal que lo permita.
+
+5.4. Base de datos de proveedores
+
+Podrá contener información de personas naturales vinculadas a proveedores de FACTURANEX SAS.
+
+Finalidades
+
+Gestionar relaciones comerciales.
+
+Contratar servicios.
+
+Procesar pagos.
+
+Cumplir obligaciones contables y tributarias.
+
+Gestionar comunicaciones.
+
+Cumplir obligaciones contractuales y legales.
+
+5.5. Base de datos de empleados y contratistas
+
+FACTURANEX SAS podrá tratar información de empleados, contratistas y demás colaboradores para finalidades relacionadas con:
+
+Gestión laboral y contractual.
+
+Seguridad social.
+
+Nómina.
+
+Pagos.
+
+Gestión administrativa.
+
+Seguridad.
+
+Cumplimiento de obligaciones legales.
+
+Gestión de recursos humanos.
+
+El tratamiento se realizará de acuerdo con las normas aplicables a cada relación.
+
+6. Obtención de la autorización
+
+Cuando legalmente sea necesario obtener autorización para el tratamiento de datos personales, FACTURANEX SAS podrá obtenerla mediante mecanismos físicos o electrónicos, incluyendo:
+
+Formularios de registro.
+
+Casillas de aceptación.
+
+Formularios de contacto.
+
+Contratos.
+
+Comunicaciones electrónicas.
+
+Autorizaciones escritas.
+
+Otros mecanismos que permitan acreditar el consentimiento.
+
+Cuando corresponda, FACTURANEX SAS conservará evidencia de la autorización otorgada.
+
+Los registros podrán contener información como:
+
+Fecha y hora.
+
+Canal mediante el cual fue obtenida.
+
+Identificación del titular.
+
+Formulario o mecanismo utilizado.
+
+Información relacionada con la autorización.
+
+7. Derechos de los titulares
+
+Los titulares podrán ejercer los derechos reconocidos por la Ley 1581 de 2012, incluyendo:
+
+Conocer los datos personales objeto de tratamiento.
+
+Solicitar la actualización de sus datos.
+
+Solicitar la rectificación de información incorrecta.
+
+Solicitar información sobre el tratamiento realizado.
+
+Solicitar prueba de la autorización cuando esta sea necesaria.
+
+Presentar consultas y reclamos.
+
+Solicitar la supresión de los datos cuando corresponda.
+
+Revocar la autorización cuando sea procedente.
+
+Acceder gratuitamente a sus datos personales.
+
+Presentar quejas ante la Superintendencia de Industria y Comercio cuando considere que se han vulnerado sus derechos.
+
+Estos derechos estarán sujetos a las excepciones y limitaciones establecidas por la legislación colombiana.
+
+8. Procedimiento para consultas y reclamos
+
+El titular podrá presentar solicitudes relacionadas con sus datos personales mediante:
+
+Correo electrónico: contacto@facturanex.com
+Teléfono: +57 315 515 5512
+Dirección: CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA, Bogotá D.C., Colombia.
+
+La solicitud deberá permitir identificar al titular y contener la información necesaria para atender adecuadamente la petición.
+
+Consultas
+
+Las consultas serán atendidas dentro del término legal aplicable, actualmente de diez (10) días hábiles contados a partir del día siguiente a la fecha de recepción.
+
+Cuando excepcionalmente no sea posible responder dentro de dicho término, se informará al interesado la razón de la demora y la fecha en que se atenderá la consulta, sin superar el término adicional permitido por la legislación.
+
+Reclamos
+
+Los reclamos serán atendidos dentro del término legal aplicable, actualmente de quince (15) días hábiles contados a partir del día siguiente a la fecha de recepción.
+
+Cuando excepcionalmente no sea posible atender el reclamo dentro de dicho término, se informará al interesado el motivo de la demora y la fecha en que será atendido, de acuerdo con los términos establecidos por la legislación vigente.
+
+9. Encargados del Tratamiento
+
+Para desarrollar sus actividades, FACTURANEX SAS podrá contratar terceros que actúen como Encargados del Tratamiento.
+
+Estos podrán prestar servicios relacionados con:
+
+Infraestructura tecnológica.
+
+Hosting.
+
+Almacenamiento.
+
+Bases de datos.
+
+Copias de seguridad.
+
+Envío de correo electrónico.
+
+Seguridad informática.
+
+Procesamiento de pagos.
+
+Monitoreo.
+
+Servicios tecnológicos especializados.
+
+Cuando corresponda, FACTURANEX SAS establecerá obligaciones contractuales relacionadas con:
+
+Confidencialidad.
+
+Seguridad.
+
+Uso limitado de la información.
+
+Tratamiento conforme a instrucciones.
+
+Gestión de incidentes.
+
+Protección de la información.
+
+Entre los proveedores tecnológicos utilizados por FacturaNex podrán encontrarse servicios de infraestructura y tecnología de terceros, tales como Amazon Web Services (AWS) y servicios de correo electrónico como Amazon SES, siempre que efectivamente hagan parte de la infraestructura vigente.
+
+10. Transmisión y transferencia de datos personales
+
+FACTURANEX SAS podrá realizar transmisiones de datos personales a Encargados del Tratamiento ubicados dentro o fuera de Colombia cuando ello sea necesario para la prestación de los servicios.
+
+Las transmisiones se realizarán de acuerdo con las condiciones establecidas en la legislación colombiana aplicable y, cuando corresponda, mediante acuerdos o contratos que regulen el tratamiento de la información.
+
+Las transferencias de datos personales a terceros se realizarán únicamente cuando exista una base jurídica que las permita.
+
+11. Medidas de seguridad
+
+FACTURANEX SAS implementará medidas técnicas, administrativas y humanas razonables para proteger los datos personales frente a riesgos como:
+
+Acceso no autorizado.
+
+Pérdida.
+
+Alteración.
+
+Divulgación.
+
+Uso indebido.
+
+Destrucción.
+
+Tratamiento no autorizado.
+
+Dependiendo del componente o servicio, estas medidas podrán incluir:
+
+Medidas técnicas
+
+HTTPS/TLS.
+
+Control de acceso.
+
+Gestión de usuarios y permisos.
+
+Autenticación.
+
+Copias de seguridad.
+
+Registros de actividad.
+
+Monitoreo.
+
+Controles de infraestructura.
+
+Medidas humanas
+
+Compromisos de confidencialidad.
+
+Capacitación.
+
+Gestión de accesos.
+
+Buenas prácticas de seguridad.
+
+Medidas administrativas
+
+Procedimientos internos.
+
+Gestión de incidentes.
+
+Control de acceso a la información.
+
+Gestión de proveedores.
+
+Procedimientos de atención de solicitudes de titulares.
+
+Las medidas podrán ser actualizadas de acuerdo con la evolución tecnológica y los riesgos identificados.
+
+12. Gestión de incidentes de seguridad
+
+FACTURANEX SAS contará con procedimientos internos para identificar, analizar y gestionar incidentes que puedan afectar la seguridad de la información.
+
+Cuando un incidente pueda generar obligaciones legales de reporte o comunicación, FACTURANEX SAS realizará las actuaciones correspondientes conforme a la legislación vigente y sus procedimientos internos.
+
+13. Tratamiento de datos sensibles
+
+FACTURANEX SAS evitará recolectar datos sensibles cuando estos no sean necesarios para la prestación de sus servicios.
+
+Cuando legalmente resulte necesario tratar información sensible, se adoptarán las medidas y condiciones especiales previstas por la legislación aplicable.
+
+Respecto de la información incorporada por los clientes en la plataforma, estos deberán garantizar el cumplimiento de las obligaciones que les correspondan como Responsables del Tratamiento.
+
+14. Datos de niños, niñas y adolescentes
+
+FACTURANEX SAS no tiene como finalidad recolectar información de niños, niñas y adolescentes.
+
+Cuando información de esta naturaleza sea incorporada por un cliente dentro de la plataforma en desarrollo de sus actividades, el cliente deberá garantizar el cumplimiento de las disposiciones legales aplicables y la protección de los derechos de los menores.
+
+15. Conservación de los datos
+
+Los datos personales serán conservados durante el tiempo necesario para cumplir las finalidades para las cuales fueron recolectados y mientras exista una relación contractual, comercial o legal que justifique su tratamiento.
+
+Cuando exista una obligación legal, tributaria, contable, contractual o administrativa de conservar determinada información, FACTURANEX SAS podrá mantenerla durante el período correspondiente.
+
+La información relacionada con facturación electrónica, nómina electrónica, documentos soporte y demás documentos sujetos a obligaciones legales será conservada de acuerdo con los términos establecidos por la normativa aplicable.
+
+Una vez cumplidas las finalidades y obligaciones de conservación, FACTURANEX SAS podrá proceder a la supresión, anonimización o conservación de la información cuando exista una obligación o fundamento legal para ello.
+
+16. Confidencialidad
+
+Las personas que intervengan en el tratamiento de datos personales estarán obligadas a mantener la confidencialidad de la información a la que tengan acceso.
+
+Esta obligación podrá mantenerse incluso después de terminada la relación contractual o laboral, de acuerdo con las obligaciones legales y contractuales aplicables.
+
+17. Cookies y tecnologías similares
+
+Los sitios web y plataformas de FACTURANEX SAS podrán utilizar cookies y tecnologías similares para:
+
+Mantener sesiones.
+
+Recordar preferencias.
+
+Mejorar la experiencia.
+
+Analizar el funcionamiento de los servicios.
+
+Generar estadísticas.
+
+Mejorar la seguridad.
+
+El usuario podrá configurar su navegador para restringir determinadas cookies, aunque algunas funcionalidades podrían verse afectadas.
+
+18. Responsabilidades de los clientes
+
+Cuando un cliente utilice FacturaNex para almacenar o procesar datos personales de terceros, deberá cumplir las obligaciones que le correspondan como Responsable del Tratamiento.
+
+Entre ellas, cuando sean aplicables:
+
+Contar con una base jurídica válida para el tratamiento.
+
+Informar a los titulares.
+
+Obtener las autorizaciones requeridas.
+
+Atender las solicitudes de los titulares.
+
+Mantener actualizada la información.
+
+Garantizar el uso legítimo de los datos.
+
+FACTURANEX SAS, cuando actúe como Encargado, tratará dicha información conforme a las instrucciones del cliente y dentro del alcance del servicio contratado.
+
+19. Modificación de la Política
+
+FACTURANEX SAS podrá modificar esta Política cuando existan cambios legales, regulatorios, tecnológicos, operativos o en sus servicios.
+
+La versión vigente será publicada en los canales oficiales de FacturaNex.
+
+Cuando las modificaciones requieran una comunicación adicional a los titulares de acuerdo con la legislación aplicable, FACTURANEX SAS realizará la comunicación correspondiente.
+
+20. Vigencia de las bases de datos
+
+Las bases de datos administradas por FACTURANEX SAS tendrán una vigencia determinada por las finalidades para las cuales fueron creadas y por las obligaciones legales, contractuales y comerciales aplicables.
+
+La información podrá conservarse durante el tiempo necesario para cumplir dichas finalidades y, posteriormente, durante los períodos exigidos por la legislación aplicable.
+
+21. Vigencia de la Política
+
+La presente Política de Tratamiento de Datos Personales entra en vigencia a partir del:
+
+5 de septiembre de 2026
+
+Última actualización: 5 de septiembre de 2026.
+
+22. Contacto
+
+Para consultas, reclamos, solicitudes o ejercicio de los derechos relacionados con datos personales:
+
+FACTURANEX SAS
+NIT: 902.049.529-8
+Dirección: CL 89 A SUR NO. 39 40, CIUDAD ROSALEDA, Bogotá D.C., Colombia
+Correo: contacto@facturanex.com
+Teléfono: +57 315 515 5512
